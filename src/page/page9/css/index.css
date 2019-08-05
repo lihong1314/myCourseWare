@@ -1,0 +1,134 @@
+.bgbox{
+    width:100vw;
+    height: auto;
+    position: relative;
+}
+.bg{
+    width:100vw;
+}
+.game{
+    width: 20.25vw;
+    position: absolute;
+    left: 40%;
+    top:0
+}
+.selectFour{
+    width:39vw;
+    position: absolute;
+    left:32%;
+    bottom:8%;
+    /* display: none; */
+}
+
+
+
+
+.molea{
+    width: 22.1vw;
+    height: auto;
+    position: absolute;
+    left: 20.1vw;
+    top: 34%;
+    transform: translateY(-10%);
+    z-index: 7;
+    -webkit-transform: translateY(-10%);
+    -moz-transform: translateY(-10%);
+    -ms-transform: translateY(-10%);
+    -o-transform: translateY(-10%);
+}
+
+.molea .Sen{
+    width: 22.1vw;
+    position: absolute;
+    top:35%;
+    left:1vw;
+    transform: translateY(-40%);
+    -webkit-transform: translateY(-40%);
+    -moz-transform: translateY(-40%);
+    -ms-transform: translateY(-40%);
+    -o-transform: translateY(-40%);
+}
+.moledui{
+    width:18vw;
+    position: absolute;
+    left: 22.625vw;
+    top: 35%;
+    transform: translateY(-40%);
+    -webkit-transform: translateY(-40%);
+    -moz-transform: translateY(-40%);
+    -ms-transform: translateY(-40%);
+    -o-transform: translateY(-40%);
+    z-index: 10;
+    /* display: none; */
+}
+.molecuo{
+    width:18vw;
+    position: absolute;
+    left: 22.625vw;
+    top: 35%;
+    transform: translateY(-40%);
+    -webkit-transform: translateY(-40%);
+    -moz-transform: translateY(-40%);
+    -ms-transform: translateY(-40%);
+    -o-transform: translateY(-40%);
+    z-index: 10;
+    /* display: none; */
+}
+
+.moleb{
+    width: 22.1vw;
+    height: auto;
+    position: absolute;
+    left: 57.5vw;
+    top: 34%;
+    transform:translateY(-60%);
+    z-index: 8;
+    -webkit-transform:translateY(-60%);
+    -moz-transform:translateY(-60%);
+    -ms-transform:translateY(-60%);
+    -o-transform:translateY(-60%);
+}
+
+.moleb .Sen{
+    width: 22.1vw;
+    position: absolute;
+    top:35%;
+    left:1vw;
+    transform: translateY(-40%);
+    -webkit-transform: translateY(-40%);
+    -moz-transform: translateY(-40%);
+    -ms-transform: translateY(-40%);
+    -o-transform: translateY(-40%);
+}
+
+
+
+.molestart{
+    width: 18.1875vw;
+    position: absolute;
+    left:40.5vw;
+    top:39%;
+    
+}
+.molestart .startimg{
+    width:100%;
+    position: absolute;
+    left:0;
+    top:0;
+    /* display:none; */
+}
+.molestart .startimgsuc{
+    width:35vw;
+    position: absolute;
+    left:-8.5vw;
+    top:0%;
+    transform: translateY(-26%);
+    -webkit-transform: translateY(-26%);
+    -moz-transform: translateY(-26%);
+    -ms-transform: translateY(-26%);
+    -o-transform: translateY(-26%);
+}
+
+
+
+

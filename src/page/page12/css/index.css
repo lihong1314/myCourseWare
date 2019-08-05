@@ -1,0 +1,271 @@
+p{
+    margin:0;
+    padding:0
+}
+.bgbox{
+    width:100vw;
+    height: auto;
+    position: relative;
+}
+.pumpkinbg{
+    width:100vw;
+    
+    position: absolute;
+    left:0;
+    top:0
+}
+
+
+
+.pumpkinBoxa{
+    width: 23vw;
+    position: absolute;
+    left:14.5vw;
+    bottom:3%;
+    z-index: 9;
+}
+.pumpkinBga{
+    width: 100%;
+}
+.pumpkinBoxa .pumpkinFont{
+    width:100%;
+    height:20vw;
+    font-size:4.25vw;
+    position: absolute;
+    left:1vw;
+    top:40%;
+    text-align: center;
+    color:#713d19;
+    text-shadow:#fff 1px 0 0,#fff 0 1px 0,#fff -1px 0 0,#fff 0 -1px 0;
+    -webkit-text-shadow:#fff 1px 0 0,#fff 0 1px 0,#fff -1px 0 0,#fff 0 -1px 0;
+    -moz-text-shadow:#fff 1px 0 0,#fff 0 1px 0,#fff -1px 0 0,#fff 0 -1px 0;
+    *filter: Glow(color=#fff, strength=1);
+}
+
+
+.pumpkinBoxb{
+    width: 23vw;
+    position: absolute;
+    right:16.5vw;
+    bottom:3%;
+    z-index: 9;
+}
+.pumpkinBgb{
+   width:100%;
+   
+}
+.pumpkinBoxb .pumpkinFont{
+    width:100%;
+    height:20vw;
+    font-size:4.25vw;
+    position: absolute;
+    left:1vw;
+    top:40%;
+    text-align: center;
+    color:#713d19;
+    text-shadow:#fff 1px 0 0,#fff 0 1px 0,#fff -1px 0 0,#fff 0 -1px 0;
+    -webkit-text-shadow:#fff 1px 0 0,#fff 0 1px 0,#fff -1px 0 0,#fff 0 -1px 0;
+    -moz-text-shadow:#fff 1px 0 0,#fff 0 1px 0,#fff -1px 0 0,#fff 0 -1px 0;
+    *filter: Glow(color=#fff, strength=1);
+}
+
+
+.selectBox{
+    width: 23vw;
+    position: absolute;
+    right:11.5vw;
+    top:28%;
+}
+.workboxa{
+    width:18vw;
+    position: absolute;
+    left:11.5vw;
+    top:31%
+}
+.workbg{
+    width:100%;
+    
+}
+
+.workboxa .workFont{
+    min-width: 8vw;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content; 
+    padding:0 1.5vw;
+    background:#fff;
+    height:9vw;
+    font-size:4.25vw;
+    position: absolute;
+    left:50%;
+    top:26%;
+    transform:translateX(-50%);
+    text-align: center;
+    color:#723d19;
+    line-height: 9vw;
+    border-radius: 2.5vw;
+    -webkit-border-radius: 2.5vw;
+    -moz-border-radius: 2.5vw;
+    -ms-border-radius: 2.5vw;
+    -o-border-radius: 2.5vw;
+    -webkit-transform:translateX(-50%);
+    -moz-transform:translateX(-50%);
+    -ms-transform:translateX(-50%);
+    -o-transform:translateX(-50%);
+}
+
+.workboxb{
+    width:18vw;
+    position: absolute;
+    left:39.5vw;
+    top:31%
+}
+
+.workboxb .workFont{
+    min-width: 8vw;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content; 
+    padding:0 1.5vw;
+    background:#fff;
+    height:9vw;
+    font-size:4.25vw;
+    position: absolute;
+    left:50%;
+    top:26%;
+    transform:translateX(-50%);
+    text-align: center;
+    color:#723d19;
+    line-height: 9vw;
+    border-radius: 2.5vw;
+    -webkit-border-radius: 2.5vw;
+    -moz-border-radius: 2.5vw;
+    -ms-border-radius: 2.5vw;
+    -o-border-radius: 2.5vw;
+    -webkit-transform:translateX(-50%);
+    -moz-transform:translateX(-50%);
+    -ms-transform:translateX(-50%);
+    -o-transform:translateX(-50%);
+}
+
+.pumpkinSuc{
+    width: 100vw;
+    position: absolute;
+    left:0;
+    top:0;
+    z-index:10;
+}
+.pumkinSucsentence{
+    width: 40vw;
+    position: absolute;
+    left:31vw;
+    top:45%;
+    transform:translateY(-43%);
+    z-index:11;
+    text-align: center;
+    color:#713d19;
+    font-size: 4.25vw;
+    word-break: break-word;
+    -webkit-transform:translateY(-43%);
+    -moz-transform:translateY(-43%);
+    -ms-transform:translateY(-43%);
+    -o-transform:translateY(-43%);
+}
+
+
+.pumpkinsuma{
+    animation: up 0.5s ease 1;
+    -webkit-animation: up 0.5s ease 1;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode:forwards;
+}
+@keyframes up{
+    0%{
+        left:14.5vw;
+        bottom:3%;
+    }
+    100%{
+        left:64.3vw;
+        bottom:36%;
+    }
+}
+@-moz-keyframes up{
+    0%{
+        left:14.5vw;
+        bottom:3%;
+    }
+    100%{
+        left:64.3vw;
+        bottom:36%;
+    }
+}
+
+@-webkit-keyframes up{
+    0%{
+        left:14.5vw;
+        bottom:3%;
+    }
+    100%{
+        left:64.3vw;
+        bottom:36%;
+    }
+}
+@-o-keyframes up{
+    0%{
+        left:14.5vw;
+        bottom:3%;
+    }
+    100%{
+        left:64.3vw;
+        bottom:36%;
+    }
+}
+
+
+.pumpkinsumb{
+    animation: up2 0.5s ease 1;
+    -webkit-animation: up2 0.5s ease 1;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode:forwards;
+}
+@keyframes up2{
+    0%{
+        right:16.vw;
+        bottom:3%;
+    }
+    100%{
+        right:12.6vw;
+        bottom:36%;
+    }
+}
+@-moz-keyframes up2{
+    0%{
+        right:16.5vw;
+        bottom:3%;
+    }
+    100%{
+        right:12.6vw;
+        bottom:36%;
+    }
+}
+
+@-webkit-keyframes up2{
+    0%{
+        right:16.5vw;
+        bottom:3%;
+    }
+    100%{
+        right:12.6vw;
+        bottom:36%;
+    }
+}
+@-o-keyframes up2{
+    0%{
+        right:16.5vw;
+        bottom:3%;
+    }
+    100%{
+        right:12.6vw;
+        bottom:36%;
+    }
+}

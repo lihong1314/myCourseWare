@@ -1,0 +1,105 @@
+.gold{
+    width: 100vw;
+    position: relative;
+}
+.gold > img:nth-of-type(2){
+    width: 100%
+}
+.answerP{
+    width: 71.188vw;
+    height: 54%;
+    position: absolute;
+    top: 46%;
+    left: 15vw;
+}
+.gold .answer{
+    width: 30vw;
+    position: absolute;
+}
+
+.answerB{
+    left: 40vw;
+}
+.Miner{
+    width: 31.25vw;
+    position: absolute;
+    top: -4%;
+    left: 35vw;
+}
+@keyframes MinerMoveL {
+    0%{
+        left: 26vw;
+        top: -6%;
+    }
+    50%{
+        left: 4vw;
+        top: -6%;
+    }
+    100%{
+        top: 8%;
+    }
+}
+@keyframes MinerMoveR {
+    0%{
+        left: 26vw;
+        top: -6%;
+    }
+    50%{
+        left: 45vw;
+        top: -6%;
+    }
+    100%{
+        top: 8%;
+    }
+}
+.MinerD{
+    width: 51vw;
+    top: -6%;
+    left: 26vw;
+    
+}
+.MinerL{
+   left: 4vw;
+   animation: MinerMoveL 2s linear 1;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+}
+.MinerR{
+    left: 45vw;
+    animation: MinerMoveR 2s linear 1;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+}
+.error{
+    width: 25.5vw;
+    position: absolute;
+    top: 15%;
+    left: 15.4vw;
+    animation: none;
+}
+.errorR{
+    left: 55.4vw;
+}
+.true{
+    width: 61.5vw;
+    position: absolute;
+    top: 29%;
+}
+.trueR{
+    left: 34.4vw;
+    transform: rotateY(180deg);
+}
+.trueL{
+    left: 6.4vw;
+}
+.goldAnswer{
+    width: 20vw;
+    position: absolute;
+    top: 25%;
+}
+.goldA{
+    left: 4vw;
+}
+.goldB{
+    left: 45vw;
+}

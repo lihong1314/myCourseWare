@@ -1,0 +1,274 @@
+.bgbox{
+    width:100vw;
+    height: auto;
+    position: relative;
+}
+.bg{
+    width:100vw;
+}
+.molegame{
+    width: 17vw;
+    position: absolute;
+    left: 41.2%;
+    top:0
+}
+.selectThree{
+    width:39vw;
+    position: absolute;
+    left:32%;
+    bottom:8%;
+    /* display: none; */
+    z-index: 14;
+}
+
+.sugardui{
+    width:15vw;
+    position: absolute;
+    left: 21.625vw;
+    top: 22%;
+    transform: translateY(-40%);
+    -webkit-transform: translateY(-40%);
+    -moz-transform: translateY(-40%);
+    -ms-transform: translateY(-40%);
+    -o-transform: translateY(-40%);
+    z-index: 10;
+    /* display: none; */
+}
+.sugarcuo{
+    width:18vw;
+    position: absolute;
+    left: 21.625vw;
+    top: 22%;
+    transform: translateY(-40%);
+    -webkit-transform: translateY(-40%);
+    -moz-transform: translateY(-40%);
+    -ms-transform: translateY(-40%);
+    -o-transform: translateY(-40%);
+    z-index: 10;
+    /* display: none; */
+}
+
+
+.sugara{
+    width: 21vw;
+    height: auto;
+    position: absolute;
+    left: 20vw;
+    top: 8%;
+    transform: translateY(-10%);
+    z-index: 7;
+    -webkit-transform: translateY(-10%);
+    -moz-transform: translateY(-10%);
+    -ms-transform: translateY(-10%);
+    -o-transform: translateY(-10%);
+}
+
+.sugara .Sen{
+    width: 21vw;
+}
+.sugara .Sena{
+    width: 21vw;
+    position: absolute;
+    left:0.25vw;
+    top:42%;
+    transform:translateY(-40%);
+}
+.sugara .linea{
+    width: 5.5vw;
+    position: absolute;
+    top: 20.45vw;
+    left: 7.625vw;
+}
+.sugara .xiong{
+    width: 3.5vw;
+    position: absolute;
+    top: 24.05vw;
+    left: 8.625vw;
+
+}
+
+
+.sugarb{
+    width: 21vw;
+    height: auto;
+    position: absolute;
+    left: 58.5vw;
+    top: 8%;
+    transform: translateY(-10%);
+    z-index: 7;
+    -webkit-transform: translateY(-10%);
+    -moz-transform: translateY(-10%);
+    -ms-transform: translateY(-10%);
+    -o-transform: translateY(-10%);
+}
+
+.sugarb .Sen{
+    width: 21vw;
+}
+.sugarb .Senb{
+    width: 21vw;
+    position: absolute;
+    left:.25vw;
+    top:42%;
+    transform:translateY(-40%);
+}
+.sugarb .lineb{
+    width: 5.5vw;
+    position: absolute;
+    top: 20.45vw;
+    left: 7.625vw;
+}
+.sugarb .xiong{
+    width: 3.5vw;
+    position: absolute;
+    top: 24.05vw;
+    left: 8.625vw;
+}
+
+
+
+.start2{
+    width: 24.1875vw;
+    position: absolute;
+    left:38.5vw;
+    top: 50%;
+    transform: translateY(110%);
+    z-index: 13;
+}
+.candyanimal{
+    width:25vw;
+    position: absolute;
+    left:50.5vw;
+    /* bottom:6%; */
+    top:50%;
+    transform: translateY(14%);
+    z-index: 12;
+}
+
+
+.whereabouts{
+    animation: down 1s ease 1;
+    -webkit-animation: down 1s ease 1;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode:forwards;
+}
+@keyframes down{
+    0%{
+        top: 24.05vw;
+    }
+    100%{
+        top: 42.05vw;
+    }
+}
+@-moz-keyframes down{
+    0%{
+        top: 24.05vw;
+    }
+    100%{
+        top: 42.05vw;
+    }
+}
+
+@-webkit-keyframes down{
+    0%{
+        top: 24.05vw;
+    }
+    100%{
+        top: 42.05vw;
+    }
+}
+
+
+@-o-keyframes down{
+    0%{
+        top: 24.05vw;
+    }
+    100%{
+        top: 42.05vw;
+    }
+}
+
+
+.left{
+    animation: leftd 1s ease 1;
+    -webkit-animation: leftd 1s ease 1;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode:forwards;
+}
+@keyframes leftd{
+    0%{
+        left:38.5vw;
+    }
+    100%{
+        left:19.5vw;
+    }
+}
+@-moz-keyframes leftd{
+    0%{
+        left:38.5vw;
+    }
+    100%{
+        left:19.5vw;
+    }
+}
+
+@-webkit-keyframes leftd{
+    0%{
+        left:38.5vw;
+    }
+    100%{
+        left:19.5vw;
+    }
+}
+
+
+@-o-keyframes leftd{
+    0%{
+        left:38.5vw;
+    }
+    100%{
+        left:19.5vw;
+    }
+}
+
+.right{
+    animation: rightd 1s ease 1;
+    -webkit-animation: rightd 1s ease 1;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode:forwards;
+}
+@keyframes rightd{
+    0%{
+        left:38.5vw;
+    }
+    100%{
+        left:58.5vw;
+    }
+}
+@-moz-keyframes rightd{
+    0%{
+        left:38.5vw;
+    }
+    100%{
+        left:58.5vw;
+    }
+}
+
+@-webkit-keyframes rightd{
+    0%{
+        left:38.5vw;
+    }
+    100%{
+        left:58.5vw;
+    }
+}
+
+
+@-o-keyframes rightd{
+    0%{
+        left:38.5vw;
+    }
+    100%{
+        left:58.5vw;
+    }
+}
