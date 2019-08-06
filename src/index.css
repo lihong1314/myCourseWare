@@ -38,12 +38,16 @@ img {
 }
 
 .Sentence {
-  width: 30vw;
+  width: 40vw;
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 45%;
   margin-left: -15vw;
-  transform: translateY(-65%)
+  transform: translateY(-56%);
+  -webkit-transform: translateY(-56%);
+  -moz-transform: translateY(-56%);
+  -ms-transform: translateY(-56%);
+  -o-transform: translateY(-56%);
 }
 
 .GameBg {

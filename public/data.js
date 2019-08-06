@@ -313,7 +313,7 @@ window.data = [
     answerArr: ["B", "B", "A", "A", "B", "A"]
 
 }, {
-    id: 39,
+    id: 40,
     type: "summary"
 }
 ]
