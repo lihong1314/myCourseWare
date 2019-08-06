@@ -280,7 +280,24 @@ window.data = [
     chickenErrsasrc: "./File/images/link6/question/error3.gif"
 }, {
     id: 38,
-    type: "endGame",
+    type: "endGame1",
+    T1A: "./File/images/sixQ/T1/A.png",
+    T1B: "./File/images/sixQ/T1/B.png",
+    T2A: "./File/images/sixQ/T2/A.png",
+    T2B: "./File/images/sixQ/T2/B.png",
+    T3A: "./File/images/sixQ/T3/A.png",
+    T3B: "./File/images/sixQ/T3/B.png",
+    T4A: "./File/images/sixQ/T4/A.png",
+    T4B: "./File/images/sixQ/T4/B.png",
+    T5A: "./File/images/sixQ/T5/A.png",
+    T5B: "./File/images/sixQ/T5/B.png",
+    T6A: "./File/images/sixQ/T6/A.png",
+    T6B: "./File/images/sixQ/T6/B.png",
+    answerArr: ["B", "B", "A", "A", "B", "A"]
+
+}, {
+    id: 39,
+    type: "endGame2",
     T1A: "./File/images/sixQ/T1/A.png",
     T1B: "./File/images/sixQ/T1/B.png",
     T2A: "./File/images/sixQ/T2/A.png",

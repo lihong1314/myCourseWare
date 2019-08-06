@@ -1,0 +1,282 @@
+.FerrisWheel {
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+}
+
+.FerrisWheel .bg {
+    width: 100%;
+}
+
+@keyframes rotate{
+    0%{
+        transform: rotateZ(0)
+    }
+    16%{
+        transform: rotateZ(60deg)
+    }
+    32%{
+        transform: rotateZ(120deg)
+    }
+    50%{
+        transform: rotateZ(180deg)
+    }
+    66%{
+        transform: rotateZ(240deg)
+    }
+    82%{
+        transform: rotateZ(300deg)
+    }
+    100%{
+        transform: rotateZ(360deg)
+    }
+}
+.gu,
+.xin {
+    width: 31.125vw;
+    position: absolute;
+    top: 3%;
+    left: 35.76vw;
+}
+.gu{
+    /* transform: rotateZ(60deg); */
+    animation: rotate 6s linear infinite ;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+}
+.gus{
+    position: absolute;
+    width: 51vw;
+    top: -86%;
+    left: 26%;
+}
+@keyframes rotates{
+    0%{
+        transform: rotateZ(0)
+    }
+    16%{
+        transform: rotateZ(-60deg)
+    }
+    32%{
+        transform: rotateZ(-120deg)
+    }
+    50%{
+        transform: rotateZ(-180deg)
+    }
+    66%{
+        transform: rotateZ(-240deg)
+    }
+    82%{
+        transform: rotateZ(-300deg)
+    }
+    100%{
+        transform: rotateZ(-360deg)
+    }
+}
+.FerrisP {
+    width: 50vw;
+    height: 70%;
+    position: absolute;
+    top: 0;
+    left: 26vw;
+    /* transform: rotateZ(60deg); */
+    animation: rotate 6s linear infinite;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+}
+
+.Ferris {
+    width: 12vw;
+    position: absolute;
+    /* transform: rotateZ(-60deg); */
+    transform-origin: 48% 14%;
+    animation: rotates 6s linear infinite;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+}
+
+.FerrisOne {
+    left: 19.35vw;
+    top: 3%;
+}
+
+.FerrisTwo {
+    left: 34vw;
+    top: 24%;
+}
+
+.FerrisThree {
+    left: 34vw;
+    top: 67%;
+}
+
+.FerrisFour {
+    left: 19.3vw;
+    top: 87%;
+}
+
+.FerrisFive {
+    left: 4.9vw;
+    top: 67%;
+}
+
+.FerrisSix {
+    left: 4.9vw;
+    top: 24%;
+}
+
+.answerK {
+    width: 21.75vw;
+    position: absolute;
+    top: 43%
+}
+
+.answerAK {
+    left: 24vw;
+}
+
+.answerBK {
+    left: 55vw;
+}
+
+.answerD {
+    width: 21.75vw;
+    position: absolute;
+    top: 43%
+}
+
+.answerA {
+    left: 24vw;
+}
+
+.answerB {
+    left: 55vw;
+}
+.zuo{
+    width: 9.625vw;
+    position: absolute;
+    top: 67.5%;
+    left: 77vw;
+}
+.SS{
+    width: 17vw;
+    position: absolute;
+    transform-origin: 47% 11%;
+}
+.lun{
+    width: 69vw;
+    height: 64%;
+    position: absolute;
+    top: -8%;
+    left: 17vw;
+    transform-origin: 49% -41%;
+}
+.greenS{
+    /* left: 18.7vw;
+    top: -12.5%; */
+    left: 2.3vw;
+    top: -8.6%;
+}
+.orangeS{
+    /* left: 43vw;
+    top: 10%; */
+    left: 26.2vw;
+    top: 30%;
+}
+.pinkS{
+    /* left: 67vw;
+    top: -12.5%; */
+    right: 2.3vw;
+    top: -8.6%;
+}
+.pinkT{
+    left: 2vw;
+    top: -83%;
+}
+.orangeT{
+    left: 25.5vw;
+    top: -124%;
+}
+.greenT{
+    left: 49.5vw;
+    top: -86%;
+}
+.SS > img:nth-of-type(1),.SS > img:nth-of-type(2){
+    width: 100%;
+    
+}
+.SS > img:nth-of-type(2){
+    position: absolute;
+    top: 0;
+    z-index: 3;
+}
+.menL{
+    width: 3.5vw;
+    position: absolute;
+    top: 65%;
+    left: 8.8vw;
+    z-index: 3;
+}
+.menR{
+    width: 3.5vw;
+    transform: rotateY(180deg);
+    position: absolute;
+    top: 65%;
+    left: 4.7vw;
+    z-index: 3;
+}
+.cry{
+    width: 25vw;
+    position: absolute;
+    top: 56.5%;
+    left: 70vw;
+}
+.cuoFL{
+    left: 27vw;
+    top: 83%;
+}
+.cuoFR{
+    left: 58vw;
+    top: 83%;
+}
+.duiFL{
+    left: 28vw;
+    top: 83%;
+}
+.duiFR{
+    left: 59vw;
+    top: 83%;
+}
+@keyframes moves{
+    0%{
+        top: 39%;
+        left: 54vw;
+    }
+    25%{
+        top: 34%;
+        left: 52vw;
+    }
+    
+    50%{
+        top: 27%;
+        left: 50vw;
+    }
+    75%{
+        top: 22%;
+        left: 48vw;
+    }
+    100%{
+        top: 17%;
+        left: 46vw;
+    }
+}
+.moveA{
+    width: 11vw;
+    position: absolute;
+    top: 39%;
+    left: 54vw;
+    z-index: 2;
+    animation: moves 1.5s linear 1;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+}
