@@ -33,10 +33,10 @@ export default class Page7 extends Component {
     componentDidMount() {
         this.state.pumpkint = setInterval(()=>{
             if(window.clickTip == 1){
-                if(localStorage.getItem("sentencegame1")==1){
-                    localStorage.setItem("sentencegame1",0)
-                    window.yanshiFn(this,require("./images/pumpkin/yanshi.gif"))
-                }
+                // if(localStorage.getItem("sentencegame1")==1){
+                //     localStorage.setItem("sentencegame1",0)
+                //     window.yanshiFn(this,require("./images/pumpkin/yanshi.gif"))
+                // }
                 clearInterval(this.state.pumpkint)
                 this.state.t2 = setTimeout(()=>{
                     window.clickTip=0

@@ -29,10 +29,10 @@ export default class Page10 extends Component {
     componentDidMount() {
         setInterval(() => {
             if (window.clickTip == 1) {
-                if(localStorage.getItem("endGame")==1){
-                    localStorage.setItem("endGame",0)
-                    window.yanshiFn(this,require("./images/yanshi.gif"))
-                }
+                // if(localStorage.getItem("endGame")==1){
+                //     localStorage.setItem("endGame",0)
+                //     window.yanshiFn(this,require("./images/yanshi.gif"))
+                // }
                 this.showAnswer()
                 this.ten()
             }

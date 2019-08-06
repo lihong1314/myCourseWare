@@ -38,7 +38,7 @@ export default class Page6 extends Component {
 
         this.state.t = setInterval(()=>{
             if(window.clickTip == 1){
-                window.yanshiFn(this,require("./images/doll2/yanshi.gif"))
+                // window.yanshiFn(this,require("./images/doll2/yanshi.gif"))
                 clearInterval(this.state.t)
                 this.state.t1 = setTimeout(()=>{
                     window.clickTip=0
@@ -55,7 +55,7 @@ export default class Page6 extends Component {
     }
     componentWillUnmount() {
         // 卸载异步操作设置状态
-        clearTimeout(this.state.t)
+        clearInterval(this.state.t)
         clearTimeout(this.state.t1)
         this.setState = (state, callback) => {
         return

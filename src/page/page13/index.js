@@ -38,10 +38,10 @@ export default class Page8 extends Component {
        
         this.state.chickent = setInterval(()=>{
             if(window.clickTip == 1){
-                if(localStorage.getItem("sentencegame2")==1){
-                    localStorage.setItem("sentencegame2",0)
-                    window.yanshiFn(this,require("./images/chicken/yanshi.gif"))               
-                }
+                // if(localStorage.getItem("sentencegame2")==1){
+                //     localStorage.setItem("sentencegame2",0)
+                //     window.yanshiFn(this,require("./images/chicken/yanshi.gif"))               
+                // }
                 clearInterval(this.state.chickent)
                 this.state.t2 = setTimeout(()=>{
                     window.clickTip=0

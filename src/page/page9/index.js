@@ -38,7 +38,7 @@ export default class Page9 extends Component {
         },4000)
         this.state.t = setInterval(()=>{
             if(window.clickTip == 1){
-                window.yanshiFn(this,require("./images/whack-a-mole/yanshi.gif"))
+                // window.yanshiFn(this,require("./images/whack-a-mole/yanshi.gif"))
                 clearInterval(this.state.t)
                 this.state.t1 = setTimeout(()=>{
                     window.clickTip=0

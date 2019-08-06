@@ -22,7 +22,7 @@ export default class Page14 extends Component {
   componentDidMount() {
     this.state.t = setInterval(() => {
       if (window.clickTip == 1) {
-        window.yanshiFn(this,require("./images/yanshi.gif"))
+        // window.yanshiFn(this,require("./images/yanshi.gif"))
         clearInterval(this.state.t)
         this.state.t1 = setTimeout(() => {
           this.setState({
