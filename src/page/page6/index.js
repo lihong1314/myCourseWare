@@ -42,6 +42,7 @@ export default class Page6 extends Component {
                 clearInterval(this.state.t)
                 this.state.t1 = setTimeout(()=>{
                     window.clickTip=0
+                    window.JAMS_Answer(false)
                     this.setState({
                         clickone: false,
                         jiaziClass: 'jiazidonghua3 jiazi',
@@ -66,6 +67,7 @@ export default class Page6 extends Component {
             clearInterval(this.state.t)
             clearTimeout(this.state.t1)
             if (type === 'A' && this.state.answer == 'A') {
+                window.JAMS_Answer(true)
                 window.clickTip=0
                 this.setState({
                     donghuaA: true,
@@ -83,6 +85,7 @@ export default class Page6 extends Component {
                     })
                 }, 3000)
             } else if (type === 'B' && this.state.answer == 'B') {
+                window.JAMS_Answer(false)
                 window.clickTip=0
                 this.setState({
                     donghuaB: true,
@@ -103,7 +106,7 @@ export default class Page6 extends Component {
                 }, 3000)
             } else {
                 window.clickTip=0
-                
+                window.JAMS_Answer(false)
                 if(this.state.index == 28){
                     this.setState({
                         clickone: false,

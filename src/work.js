@@ -72,3 +72,36 @@ window.yanshiFn = function(that,src){
 localStorage.setItem('sentencegame1',1);
 localStorage.setItem('sentencegame2',1);
 localStorage.setItem('endGame',1);
+
+window.JAMS_showJb = function(params) {
+    if (/android/i.test(navigator.userAgent)) {
+        try {
+            window.androidApi.showJb(params)
+        } catch (e) {
+            console.log(e)
+        }
+    } else if (/ios|iphone|ipod|pad/i.test(navigator.userAgent)) {
+        try {
+            window.webkit.messageHandlers.sendCapNumberClick.postMessage(params)
+        } catch (e) {
+            console.log(e)
+        }
+    }
+}
+    
+window.JAMS_Answer = function(params) {
+    console.log("params:",params)
+    if (/android/i.test(navigator.userAgent)) {
+        try {
+            window.androidApi.answerResult(params)
+        } catch (e) {
+            console.log(e)
+        }
+    } else if (/ios|iphone|ipod|pad/i.test(navigator.userAgent)) {
+        try {
+            window.webkit.messageHandlers.answerResult.postMessage(params)
+        } catch (e) {
+            console.log(e)
+        }
+    }
+}

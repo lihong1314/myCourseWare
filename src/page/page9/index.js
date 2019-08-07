@@ -42,6 +42,7 @@ export default class Page9 extends Component {
                 clearInterval(this.state.t)
                 this.state.t1 = setTimeout(()=>{
                     window.clickTip=0
+                    window.JAMS_Answer(false)
                     if (this.state.answer !== 'A') {
                         this.setState({
                             clickone:false,
@@ -83,6 +84,7 @@ export default class Page9 extends Component {
             clearTimeout(this.state.t1)
                 if(type === 'A' && this.state.answer == 'A'){
                     window.clickTip=0
+                    window.JAMS_Answer(true)
                     this.setState({
                         clickone:false,
                         audioUrl:require('./images/audio/Great.mp3'),
@@ -95,6 +97,7 @@ export default class Page9 extends Component {
                     })
                 }else if(type === 'B' && this.state.answer == 'B'){
                     window.clickTip=0
+                    window.JAMS_Answer(true)
                     this.setState({
                         clickone:false,
                         audioUrl:require('./images/audio/Great.mp3'),
@@ -108,6 +111,7 @@ export default class Page9 extends Component {
                     })
                 }else{
                     window.clickTip=0
+                    window.JAMS_Answer(false)
                     if(type === 'A'){
                         this.setState({
                             clickone:false,

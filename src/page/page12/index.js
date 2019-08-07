@@ -40,6 +40,7 @@ export default class Page7 extends Component {
                 clearInterval(this.state.pumpkint)
                 this.state.t2 = setTimeout(()=>{
                     window.clickTip=0
+                    window.JAMS_Answer(false)
                     this.setState({
                         clickone:false,
                         audioUrl:require('./images/audio/error.mp3'),
@@ -75,6 +76,7 @@ export default class Page7 extends Component {
             clearTimeout(this.state.t2)
             window.clickTip = 0
             if(type === 'A' && this.state.answer == 'A'){
+                window.JAMS_Answer(true)
                 this.setState({
                     clickone:false,
                     audioUrl:require('./images/audio/Great.mp3'),
@@ -95,7 +97,7 @@ export default class Page7 extends Component {
                     })
                 },1400)
             }else if(type === 'B' && this.state.answer == 'B'){
-                
+                window.JAMS_Answer(true)
                 this.setState({
                     clickone:false,
                     audioUrl:require('./images/audio/Great.mp3'),
@@ -116,6 +118,7 @@ export default class Page7 extends Component {
                     })
                 },1400)
             }else{
+                window.JAMS_Answer(false)
                 this.setState({
                     clickone:false,
                     audioUrl:require('./images/audio/error.mp3'),

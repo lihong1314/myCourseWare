@@ -37,6 +37,7 @@ export default class Page8 extends Component {
                 clearInterval(this.state.t)
                 this.state.t1 = setTimeout(()=>{
                     window.clickTip=0
+                    window.JAMS_Answer(false)
                     if (this.state.answer !== 'A') {
                         this.setState({
                             clickone: false,
@@ -69,6 +70,7 @@ export default class Page8 extends Component {
             clearInterval(this.state.t)
             clearTimeout(this.state.t1)
             if (type === 'A' && this.state.answer == 'A') {
+                window.JAMS_Answer(true)
                 window.clickTip=0
                 this.setState({
                     clickone: false,
@@ -81,6 +83,7 @@ export default class Page8 extends Component {
                     startclass: 'start2 left'
                 })
             } else if (type === 'B' && this.state.answer == 'B') {
+                window.JAMS_Answer(true)
                 window.clickTip=0
                 this.setState({
                     clickone: false,
@@ -94,6 +97,7 @@ export default class Page8 extends Component {
                 })
             } else {
                 window.clickTip=0
+                window.JAMS_Answer(false)
                 if (type === 'A') {
                     this.setState({
                         clickone: false,

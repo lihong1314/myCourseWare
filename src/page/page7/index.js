@@ -30,7 +30,18 @@ export default class Page7 extends Component {
             if(window.clickTip == 1){
                 clearInterval(this.state.t)
                 this.state.t1 = setTimeout(()=>{
+                    window.JAMS_Answer(false)
                     window.clickTip=0
+                    window.JAMS_Answer(false)
+                    if(answer === 'A'){
+                        this.setState({
+                            direction:0,
+                        })
+                    }else{
+                        this.setState({
+                            direction:1,
+                        })
+                    }
                     this.setState({
                         answer:0,
                         answerTip:0,
@@ -50,6 +61,7 @@ export default class Page7 extends Component {
             clearTimeout(this.state.t1)
             if (answer === 'A' && this.state.data.answer == 'A') {
                 window.clickTip=0
+                window.JAMS_Answer(true)
                 this.setState({
                     tip:1,
                     answer:1,
@@ -61,6 +73,7 @@ export default class Page7 extends Component {
                 })
             } else if (answer === 'B' && this.state.data.answer == 'B') {
                 window.clickTip=0
+                window.JAMS_Answer(true)
                 this.setState({
                     tip:1,
                     answer:1,
@@ -72,6 +85,7 @@ export default class Page7 extends Component {
                 })
             } else {
                 window.clickTip=0
+                window.JAMS_Answer(false)
                 if(answer === 'A'){
                     this.setState({
                         direction:0,
