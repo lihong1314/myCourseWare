@@ -806,6 +806,7 @@ img {
   left: 44vw;
   top: 49%;
   transform: rotateY(180deg);
+  z-index: 3;
 }
 
 
