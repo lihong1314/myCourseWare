@@ -284,10 +284,9 @@ export default class Page14 extends Component {
           </div>
         </div>
         <div className={answerType == 1 ? "" : "hide"}>
-
           <img className="bg" src={require("./images/bigBG.jpg")} alt="" />
           <img ref="gu" className="gus" src={require("./images/gu.png")} alt="" />
-          <div className={trueFalse == 1 ? "hide" : ""}>
+          <div className={trueFalse == 1 ? "hide" : "guP"}>
             <img className="answerK answerAK" src={require("./images/AK.png")} alt="" />
             <img onClick={this.changeAnswer.bind(this, "A")} className="answerK answerAK" src={A} alt="" />
             <img className="answerK answerBK" src={require("./images/BK.png")} alt="" />

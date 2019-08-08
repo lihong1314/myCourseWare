@@ -1,6 +1,5 @@
 import { hashHistory } from "react-router";
 
-
 window.ToPage=function(page){
     if(window.data[page].type==="img"){
         hashHistory.replace("/Page1"+"?id="+page)
@@ -55,7 +54,6 @@ window.ToPage=function(page){
 window.exec=function(){
     window.clickTip=1    
 }
-
 
 window.yanshiFn = function(that,src){
     that.setState({

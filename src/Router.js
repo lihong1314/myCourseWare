@@ -32,6 +32,7 @@ export default class Routers extends Component {
             <Router history={hashHistory}>
                 {/* <Route path="/?id=0" component={Page1} /> */}
                 <Route path="/" component={Page14} />
+                <Route path="/Page0" component={Page0} />
                 <Route path="/Page1" component={Page1} />
                 
                 <Route path="/Page2" component={Page2} />
