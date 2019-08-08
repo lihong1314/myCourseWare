@@ -33,7 +33,7 @@ export default class Page7 extends Component {
                     window.JAMS_Answer(false)
                     window.clickTip=0
                     window.JAMS_Answer(false)
-                    if(answer === 'A'){
+                    if(this.state.answer === 'A'){
                         this.setState({
                             direction:0,
                         })
