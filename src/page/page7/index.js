@@ -32,7 +32,7 @@ export default class Page7 extends Component {
                 this.state.t1 = setTimeout(()=>{
                     window.JAMS_Answer(false)
                     window.clickTip=0
-                    window.JAMS_Answer(false)
+                    
                     if(this.state.answer === 'A'){
                         this.setState({
                             direction:0,
