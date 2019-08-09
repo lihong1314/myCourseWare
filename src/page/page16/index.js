@@ -157,6 +157,7 @@ export default class Page14 extends Component {
       TrueAnswer:this.state.data.answerArr[this.state.answerNum]
     })
     this.state.t1 = setTimeout(() => {
+      window.JAMS_Answer(false)
       if (this.state.TrueAnswer === "A") {
         this.changeAnswer("B")
       } else if (this.state.TrueAnswer === "B") {
@@ -173,6 +174,7 @@ export default class Page14 extends Component {
         tip:0
       })
       if (type === "A" && this.state.TrueAnswer === "A") {
+        window.JAMS_Answer(true)
         this.setState({
           answer: 1,
           audioUrl:require('./images/true.mp3')
@@ -186,6 +188,7 @@ export default class Page14 extends Component {
           this.doorFn(1)
         }, 2000)
       } else if (type === "B" && this.state.TrueAnswer === "B") {
+        window.JAMS_Answer(true)
         this.setState({
           answer: 1,
           audioUrl:require('./images/true.mp3')
@@ -199,6 +202,7 @@ export default class Page14 extends Component {
           this.doorFn(1)
         }, 2000)
       } else {
+        window.JAMS_Answer(false)
         this.setState({
           answer: 0,
           audioUrl:require('./images/false.mp3')

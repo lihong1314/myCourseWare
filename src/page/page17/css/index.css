@@ -1,0 +1,79 @@
+.bg7{
+    width: 100%;
+    position: relative;
+}
+.bg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    background: rgba(0,0,0, 0.4)
+}
+
+.hezi{
+    position: absolute;
+    top: 50%;
+    left: 23vw;
+    transform: translateY(-48%);
+}
+.blue7{
+    width: 55.8854vw;
+}
+#hezi1{
+  position: absolute;
+  width: 16vw;
+  left: 8vw;
+  top: 5%;
+  /* transform: translateY(-5%); */
+  
+}
+#hezi2{
+ position: absolute;
+    width: 16vw;
+    top: 5%;
+    left: 31vw;
+    /* transform: translateY(-105%); */
+ }
+ #hezi3{
+    position: absolute;
+    width: 16vw;
+    top: 50%;
+    left: 8vw;
+    /* transform: translateY(-5%); */
+ }
+ #hezi4{
+    position: absolute;
+    width: 16vw;
+    top: 50%;
+    left: 31vw;
+    /* transform: translateY(-5%); */
+  }
+  #trophy1{
+    position: absolute;
+    width: 30vw;
+    top: -12%;
+    left: 1vw;
+    z-index:10;
+  }
+  #trophy2{
+    position: absolute;
+    width: 30vw;
+    top: -12%;
+    left: 24vw;
+    z-index:10;
+  }
+  #trophy3{
+    position: absolute;
+    width: 30vw;
+    top: -5%;
+    left: 1vw;
+    z-index:10;
+  }
+  #trophy4{
+    position: absolute;
+    width: 30vw;
+    top: -5%;
+    left: 24vw;
+    z-index:10;
+  }

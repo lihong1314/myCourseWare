@@ -25,6 +25,7 @@ export default class Page14 extends Component {
         // window.yanshiFn(this,require("./images/yanshi.gif"))
         clearInterval(this.state.t)
         this.state.t1 = setTimeout(() => {
+          window.JAMS_Answer(false)
           this.setState({
             answer: 0
           })
@@ -56,6 +57,7 @@ export default class Page14 extends Component {
       clearTimeout(this.state.t1)
       clearTimeout(this.state.t2)
       if (type === "A" && this.state.answerC === "A") {
+        window.JAMS_Answer(true)
         this.setState({
           answer: 1,
           nowAnswer: type,
@@ -69,6 +71,7 @@ export default class Page14 extends Component {
           })
         }, 2000)
       } else if (type === "B" && this.state.answerC === "B") {
+        window.JAMS_Answer(true)
         this.setState({
           answer: 1,
           nowAnswer: type,
@@ -82,6 +85,7 @@ export default class Page14 extends Component {
           })
         }, 2000)
       } else {
+        window.JAMS_Answer(false)
         this.setState({
           answer: 0,
           nowAnswer: type,

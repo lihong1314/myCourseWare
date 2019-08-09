@@ -314,6 +314,11 @@ window.data = [
 
 }, {
     id: 40,
+    type:"endGift",
+    bg:"./File/images/gameGift.jpg"
+
+},{
+    id: 41,
     type: "summary"
 }
 ]

@@ -22,6 +22,7 @@ import Page13 from "./page/page13/index.js";
 import Page14 from "./page/page14/index.js";
 import Page15 from "./page/page15/index.js";
 import Page16 from "./page/page16/index.js";
+import Page17 from "./page/page17/index.js";
 
 require('../src/rem.js');
 require('../src/work.js');
@@ -57,6 +58,7 @@ export default class Routers extends Component {
                 <Route path="/Page14" component={Page14} />
                 <Route path="/Page15" component={Page15} />
                 <Route path="/Page16" component={Page16} />
+                <Route path="/Page17" component={Page17} />
 
 
             </Router>

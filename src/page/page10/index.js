@@ -76,6 +76,7 @@ export default class Page10 extends Component {
                 answerTip: 0
             })
             t2 = setTimeout(() => {
+                window.JAMS_Answer(false)
                 this.setState({
                     answerNum: this.state.answerNum + 1,
                     type: 0,
@@ -132,6 +133,7 @@ export default class Page10 extends Component {
         if (window.clickTip == 2) {
             clearTimeout(t1)
             if (type === "A" && this.state.answer === "A") {
+                window.JAMS_Answer(true)
                 window.clickTip = 0
                 this.setState({
                     answerTip: 1,
@@ -150,6 +152,7 @@ export default class Page10 extends Component {
                     })
                 }, 2000)
             } else if (type === "B" && this.state.answer === "B") {
+                window.JAMS_Answer(true)
                 window.clickTip = 0
                 this.setState({
                     answerTip: 1,
@@ -169,6 +172,7 @@ export default class Page10 extends Component {
                     // window.clickTip = 1
                 }, 2000)
             } else {
+                window.JAMS_Answer(false)
                 window.clickTip = 0
                 if (this.state.answerNum == 0) {
                     this.setState({

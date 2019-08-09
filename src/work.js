@@ -43,6 +43,9 @@ window.ToPage=function(page){
     if(window.data[page].type==="endGame2"){// 课中结束游戏
         hashHistory.replace("/Page16"+"?id="+page)
     }
+    if(window.data[page].type==="endGift"){// 课中结束游戏
+        hashHistory.replace("/Page17"+"?id="+page)
+    }
     if(window.data[page].type==="end"){//没用
         hashHistory.replace("/Page11"+"?id="+page)
     }
@@ -70,3 +73,36 @@ window.yanshiFn = function(that,src){
 localStorage.setItem('sentencegame1',1);
 localStorage.setItem('sentencegame2',1);
 localStorage.setItem('endGame',1);
+
+window.JAMS_showJb = function(params) {
+    if (/android/i.test(navigator.userAgent)) {
+        try {
+            window.androidApi.showJb(params)
+        } catch (e) {
+            console.log(e)
+        }
+    } else if (/ios|iphone|ipod|pad/i.test(navigator.userAgent)) {
+        try {
+            window.webkit.messageHandlers.sendCapNumberClick.postMessage(params)
+        } catch (e) {
+            console.log(e)
+        }
+    }
+}
+    
+window.JAMS_Answer = function(params) {
+    console.log("params:",params)
+    if (/android/i.test(navigator.userAgent)) {
+        try {
+            window.androidApi.answerResult(params)
+        } catch (e) {
+            console.log(e)
+        }
+    } else if (/ios|iphone|ipod|pad/i.test(navigator.userAgent)) {
+        try {
+            window.webkit.messageHandlers.answerResult.postMessage(params)
+        } catch (e) {
+            console.log(e)
+        }
+    }
+}
