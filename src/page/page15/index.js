@@ -5,7 +5,7 @@ require("./css/index.css")
 export default class Page14 extends Component {
   constructor(props) {
     super(props)
-    this.state = {
+    this.state = {   
       answer: -1,
       answerA: 0,//控制 错误 和 挖洞 切换
       answerC: window.data[this.props.location.search.substring(this.props.location.search.indexOf("=") + 1)].answer,//选择A B正确答案

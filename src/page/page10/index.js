@@ -156,7 +156,7 @@ export default class Page10 extends Component {
                 window.clickTip = 0
                 this.setState({
                     answerTip: 1,
-                })
+                })  
                 clearTimeout(t)
                 t = setTimeout(() => {
                     this.setState({

@@ -186,7 +186,7 @@ export default class Page14 extends Component {
             trueFalse: 1
           })
           this.doorFn(1)
-        }, 2000)
+        }, 2000)  
       } else if (type === "B" && this.state.TrueAnswer === "B") {
         window.JAMS_Answer(true)
         this.setState({
