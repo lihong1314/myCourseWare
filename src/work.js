@@ -37,13 +37,13 @@ window.ToPage=function(page){
     if(window.data[page].type==="sentencegame2"){ // 小鸡叫
         hashHistory.replace("/Page13"+"?id="+page)
     }
-    if(window.data[page].type==="endGame1"){// 课中结束游戏
+    if(window.data[page].type==="endGame1"){// 课中结束游戏（糖果树）
         hashHistory.replace("/Page10"+"?id="+page)
     }
-    if(window.data[page].type==="endGame2"){// 课中结束游戏
+    if(window.data[page].type==="endGame2"){// 课中结束游戏（摩天轮）
         hashHistory.replace("/Page16"+"?id="+page)
     }
-    if(window.data[page].type==="endGift"){// 课中结束游戏
+    if(window.data[page].type==="endGift"){// 课中结束游戏（抽奖）
         hashHistory.replace("/Page17"+"?id="+page)
     }
     if(window.data[page].type==="end"){//没用

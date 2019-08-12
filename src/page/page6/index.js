@@ -85,7 +85,7 @@ export default class Page6 extends Component {
                     })
                 }, 3000)
             } else if (type === 'B' && this.state.answer == 'B') {
-                window.JAMS_Answer(false)
+                window.JAMS_Answer(true)
                 window.clickTip=0
                 this.setState({
                     donghuaB: true,
