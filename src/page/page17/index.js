@@ -50,7 +50,7 @@ export default class Page17 extends Component {
         return (
             <div>
                 <img className="bg7" src={bg} alt="" />
-                <div className="bg"> </div>
+                <div className="bgs"> </div>
                 <div className="hezi">
                     <img className="blue7" src={require("./images/cj_bg.png")} alt="" />
                     <img id="hezi1" src={way} alt="" onClick={() => this.handleClick('1')} />

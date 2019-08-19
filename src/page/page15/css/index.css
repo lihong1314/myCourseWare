@@ -13,13 +13,11 @@
     left: 15vw;
 }
 .gold .answer{
-    width: 30vw; 
+    width: 30vw;
     position: absolute;
 }
-.answerP >.answerA{
-    left: 0vw;
-}
-.answerP >.answerB{
+
+.answerB{
     left: 40vw;
 }
 .Miner{

@@ -6,6 +6,7 @@ p{
     width:100vw;
     height: auto;
     position: relative;
+    overflow: hidden;
 }
 .pumpkinbg{
     width:100vw;
@@ -28,12 +29,16 @@ p{
     width: 100%;
 }
 .pumpkinBoxa .pumpkinFont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width:100%;
-    height:20vw;
+    height:100%;
     font-size:4.25vw;
     position: absolute;
     left:1vw;
-    top:40%;
+    top:50%;
+    transform: translateY(-50%);
     text-align: center;
     color:#713d19;
     text-shadow:#fff 1px 0 0,#fff 0 1px 0,#fff -1px 0 0,#fff 0 -1px 0;
@@ -268,4 +273,112 @@ p{
         right:12.6vw;
         bottom:36%;
     }
+}
+
+.pumpkinerrbox{
+    width:100%;
+    height: 100%;
+    position: absolute;
+    left:0;
+    top:0;
+    background:rgba(0,0,0,0.6);
+    z-index: 11;
+    display: none;
+}
+.pumkinerror{
+    width:49vw;
+    position: absolute;
+    left:25vw;
+    top:-40vw;
+}
+.pumkinerror img{
+    width:100%;
+}
+.pumpkinerrbox .word{
+    width: 40vw;
+    position: absolute;
+    left:5vw;
+    top:58%;
+    transform:translateY(-43%);
+    z-index:11;
+    text-align: center;
+    color:#713d19;
+    font-size: 4.25vw;
+    word-break: break-word;
+    -webkit-transform:translateY(-43%);
+    -moz-transform:translateY(-43%);
+    -ms-transform:translateY(-43%);
+    -o-transform:translateY(-43%);
+}
+
+.down{
+    animation: down1 0.5s ease 1;
+    -webkit-animation: down1 0.5s ease 1;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode:forwards;
+}
+@keyframes down1{
+    0%{
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+}
+    100%{
+        transform: translateY(40vw);
+        -webkit-transform: translateY(40vw);
+        -moz-transform: translateY(40vw);
+        -ms-transform: translateY(40vw);
+        -o-transform: translateY(40vw);
+}
+}
+@-moz-keyframes down1{
+    0%{
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+}
+    100%{
+        transform: translateY(40vw);
+        -webkit-transform: translateY(40vw);
+        -moz-transform: translateY(40vw);
+        -ms-transform: translateY(40vw);
+        -o-transform: translateY(40vw);
+}
+}
+
+@-webkit-keyframes down1{
+    0%{
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+}
+    100%{
+        transform: translateY(40vw);
+        -webkit-transform: translateY(40vw);
+        -moz-transform: translateY(40vw);
+        -ms-transform: translateY(40vw);
+        -o-transform: translateY(40vw);
+}
+}
+@-o-keyframes down1{
+    0%{
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+}
+    100%{
+        transform: translateY(40vw);
+        -webkit-transform: translateY(40vw);
+        -moz-transform: translateY(40vw);
+        -ms-transform: translateY(40vw);
+        -o-transform: translateY(40vw);
+}
 }

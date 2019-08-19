@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { hashHistory } from "react-router";
+import GifPlayer from 'react-gif-player';
 
 import './css/index.css';
+window.clickTip = 0
 export default class Page8 extends Component {
     constructor(props) {
         super(props)
@@ -32,43 +33,50 @@ export default class Page8 extends Component {
             t2:0,
             yanshiShow:'none',
             yanshisrc:'',
+            aerror:'aerror',
+            berror:'berror'
         }
     }
     componentDidMount() {
        
         this.state.chickent = setInterval(()=>{
             if(window.clickTip == 1){
-                // if(localStorage.getItem("sentencegame2")==1){
-                //     localStorage.setItem("sentencegame2",0)
-                //     window.yanshiFn(this,require("./images/chicken/yanshi.gif"))               
-                // }
                 clearInterval(this.state.chickent)
                 this.state.t2 = setTimeout(()=>{
                     window.clickTip=0
                     window.JAMS_Answer(false)
-                    if(this.state.answer !== 'A'){
-                        this.setState({
-                            clickone:false,
-                            audioUrl:require('./images/audio/error.mp3'),
-                            raduioflg:true,
-                            chicken:'none',
-                            chickenerrflg:'block',
-                            chickenErrsaClass:'chickenErrsa chickenrunright',
-                            chickenErrsasrc:window.data[this.state.index].chickenErrsasrc,
-                            chickenErrsaFlg:'block',
-                        })
-                    }else if(this.state.answer !== 'B'){
-                        this.setState({
-                            clickone:false,
-                            audioUrl:require('./images/audio/error.mp3'),
-                            raduioflg:true,
-                            chicken:'none',
-                            chickenerrflg:'block',
-                            chickenErrsbClass:'chickenErrsb chickenrunleft',
-                            chickenErrsasrc:window.data[this.state.index].chickenErrsasrc,
-                            chickenErrsbFlg:'block',
-                        })
-                    }
+                    this.setState({
+                        clickone:false,
+                        audioUrl:require('../Qaudio/false.mp3'),
+                        raduioflg:true,
+                    })
+                    setTimeout(() => {
+                        if(this.state.answer === 'A'){
+                            this.setState({
+                                clickone:false,
+                                audioUrl:require('./images/audio/error.mp3'),
+                                raduioflg:true,
+                                chicken:'none',
+                                chickenerrflg:'block',
+                                chickenErrsaClass:'chickenErrsa chickenrunright',
+                                aerror:'aerror chickenrunright',
+                                chickenErrsasrc:window.data[this.state.index].chickenErrsasrc,
+                                chickenErrsaFlg:'block',
+                            })
+                        }else if(this.state.answer === 'B'){
+                            this.setState({
+                                clickone:false,
+                                audioUrl:require('./images/audio/error.mp3'),
+                                raduioflg:true,
+                                chicken:'none',
+                                chickenerrflg:'block',
+                                chickenErrsbClass:'chickenErrsb chickenrunleft',
+                                berror:'berror chickenrunleft',
+                                chickenErrsasrc:window.data[this.state.index].chickenErrsasrc,
+                                chickenErrsbFlg:'block',
+                            })
+                        }
+                    },2000)
                     clearTimeout(this.state.t2)
                 },10000)
             }
@@ -89,78 +97,90 @@ export default class Page8 extends Component {
         // hashHistory.replace("/Page2")
     }
     click(type){
-        
         if(this.state.clickone && window.clickTip==1){
             clearInterval(this.state.chickent)
             clearTimeout(this.state.t2)
             window.clickTip = 0;
-            
             if(type === 'A' && this.state.answer == 'A'){
                 window.JAMS_Answer(true)
+                window.clickTip = 0
                 this.setState({
                     clickone:false,
-                    audioUrl:require('./images/audio/Great.mp3'),
+                    audioUrl:require('../Qaudio/true.mp3'),
                     raduioflg:true,
                     pumAclass:'chickenBoxa chickensuma'
                 })
-                setTimeout(()=>{
+                setTimeout(() => {
                     this.setState({
+                        audioUrl:require('./images/audio/Great.mp3'),
+                            raduioflg:true,
                         chicken:'none',
                         chickenflg:'block',
-                        chickensrc:window.data[this.state.index].chickensrc,
+                        chickensrc:require("./images/chicken/success.gif")
                     })
-                },800)
+                }, 1000);
                 
             }else if(type === 'B' && this.state.answer == 'B'){
                 window.JAMS_Answer(true)
+                window.clickTip = 0
                 this.setState({
                     clickone:false,
-                    audioUrl:require('./images/audio/Great.mp3'),
+                    audioUrl:require('../Qaudio/true.mp3'),
                     raduioflg:true,
                     pumBclass:'chickenBoxb chickensumb'
+
                 })
-                setTimeout(()=>{
+                setTimeout(() => {
                     this.setState({
+                        audioUrl:require('./images/audio/Great.mp3'),
+                        raduioflg:true,
                         chicken:'none',
                         chickenflg:'block',
-                        chickensrc:window.data[this.state.index].chickensrc,
+                        chickensrc:require("./images/chicken/success.gif")
                     })
-                },800)
+                    
+                }, 1000);
                 
             }else{
                 window.JAMS_Answer(false)
-                if(type === 'A'){
-                    this.setState({
-                        clickone:false,
-                        audioUrl:require('./images/audio/error.mp3'),
-                        raduioflg:true,
-                        chicken:'none',
-                        chickenerrflg:'block',
-                        chickenErrsaClass:'chickenErrsa chickenrunright',
-                        chickenErrsasrc:window.data[this.state.index].chickenErrsasrc,
-                        chickenErrsaFlg:'block',
-                    })
-                }else if(type === 'B'){
-                    this.setState({
-                        clickone:false,
-                        audioUrl:require('./images/audio/error.mp3'),
-                        raduioflg:true,
-                        chicken:'none',
-                        chickenerrflg:'block',
-                        chickenErrsbClass:'chickenErrsb chickenrunleft',
-                        chickenErrsasrc:window.data[this.state.index].chickenErrsasrc,
-                        chickenErrsbFlg:'block',
-                    })
-                }
-                
-                
+                window.clickTip = 0
+                this.setState({
+                    clickone:false,
+                    audioUrl:require('../Qaudio/false.mp3'),
+                    raduioflg:true,
+                })
+                setTimeout(() => {
+                    if(type === 'A'){
+                        this.setState({
+                            clickone:false,
+                            audioUrl:require('./images/audio/error.mp3'),
+                            raduioflg:true,
+                            chicken:'none',
+                            chickenerrflg:'block',
+                            chickenErrsaClass:'chickenErrsa chickenrunright',
+                            aerror:'aerror chickenrunright',
+                            chickenErrsasrc:require("./images/chicken/errors.gif"),
+                            chickenErrsaFlg:'block',
+                        })
+                    }else if(type === 'B'){
+                        this.setState({
+                            clickone:false,
+                            audioUrl:require('./images/audio/error.mp3'),
+                            raduioflg:true,
+                            chicken:'none',
+                            chickenerrflg:'block',
+                            chickenErrsbClass:'chickenErrsb chickenrunleft',
+                            berror:'berror chickenrunleft',
+                            chickenErrsasrc:require("./images/chicken/errors.gif"),
+                            chickenErrsbFlg:'block',
+                        })
+                    }
+                }, 2000);      
             }
-            
         }
-       
     }
     render() {
-        const {audioUrl,sentenceAtip,sentenceBtip,sentenceA,sentenceB,raduioflg,chickenflg,chickensrc,pumAclass,chicken,pumBclass,chickenerrflg,chickenErrsaClass,chickenErrsasrc,chickenErrsbClass,chickenErrsaFlg,chickenErrsbFlg,yanshiShow,yanshisrc} = this.state
+        const {audioUrl,sentenceAtip,sentenceBtip,sentenceA,sentenceB,raduioflg,chickenflg,chickensrc,pumAclass,chicken,pumBclass,chickenerrflg,chickenErrsaClass,chickenErrsasrc,chickenErrsbClass,chickenErrsaFlg,chickenErrsbFlg,yanshiShow,yanshisrc,data,aerror,berror} = this.state
         return (
             <div className="bgbox" >
                 <img className="dollyanshi" style={{display:yanshiShow}} src={yanshisrc} alt=""/>
@@ -191,8 +211,9 @@ export default class Page8 extends Component {
                 </div>
 
                 <div className="chickenSucbox" style={{display:chickenflg}}>
-                    <img className="chickenSuc" src={chickensrc} />
-                    <p className="chickenTip">{ window.data[this.state.index].pumkinSucsentence}</p>
+                    {/* <img className="chickenSuc" src={chickensrc} /> */}
+                    <GifPlayer className="chickenSuc" gif={chickensrc} autoplay="true" />
+                    <p className="chickenTip">{ data.pumkinSucsentence}</p>
                 </div>
 
                 <div className="chickenErrbox" style={{display:chickenerrflg}}>
@@ -202,7 +223,9 @@ export default class Page8 extends Component {
                         <img className="chickenBgb" src={require("./images/chicken/select.png")} alt="" />
                     </div>
                     <img className={chickenErrsaClass} style={{display:chickenErrsaFlg}} src={chickenErrsasrc} alt="" />
+                    <div className={aerror}><p>{ data.pumkinSucsentence}</p></div>
                     <img className={chickenErrsbClass} style={{display:chickenErrsbFlg}} src={chickenErrsasrc} alt="" />
+                    <div className={berror}><p>{ data.pumkinSucsentence}</p></div>
                 </div>
 
                 
@@ -214,6 +237,4 @@ export default class Page8 extends Component {
             </div>
         )
     }
-    
- 
 }

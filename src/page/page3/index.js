@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import MyBg from "../myBg/index.js";
 
 export default class Page3 extends Component {
     constructor(props) {
@@ -12,7 +13,8 @@ export default class Page3 extends Component {
         let {data}=this.state
         return (
             <div className="WordB">
-                <img className="FullScreen" src={data.bgImg} alt="" />
+                <MyBg/>
+                <img className="mywordbox" src={data.wordbox} alt=""/>
                 <img className="Word" src={data.content} alt="" />
             </div>
         )

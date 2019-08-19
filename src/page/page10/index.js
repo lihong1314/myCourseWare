@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import GifPlayer from 'react-gif-player';
 let t;
 let t1;
 let t2;
+window.clickTip = 0
 export default class Page10 extends Component {
     constructor(props) {
         super(props)
@@ -29,10 +31,6 @@ export default class Page10 extends Component {
     componentDidMount() {
         setInterval(() => {
             if (window.clickTip == 1) {
-                // if(localStorage.getItem("endGame")==1){
-                //     localStorage.setItem("endGame",0)
-                //     window.yanshiFn(this,require("./images/yanshi.gif"))
-                // }
                 this.showAnswer()
                 this.ten()
             }
@@ -41,7 +39,6 @@ export default class Page10 extends Component {
     ten() {
         window.clickTip = 2
         t1 = setTimeout(() => { 
-           
             if (this.state.answerNum == 0) {
                 this.setState({
                     zhadan1: 1
@@ -137,6 +134,8 @@ export default class Page10 extends Component {
                 window.clickTip = 0
                 this.setState({
                     answerTip: 1,
+                    raduioflg: true,
+                    audioUrl: require('../Qaudio/true.mp3'),
                 })
                 clearTimeout(t)
                 t = setTimeout(() => {
@@ -156,6 +155,8 @@ export default class Page10 extends Component {
                 window.clickTip = 0
                 this.setState({
                     answerTip: 1,
+                    raduioflg: true,
+                    audioUrl: require('../Qaudio/true.mp3'),
                 })  
                 clearTimeout(t)
                 t = setTimeout(() => {
@@ -169,7 +170,6 @@ export default class Page10 extends Component {
                     }, () => {
                         this.refs.audio.play()
                     })
-                    // window.clickTip = 1
                 }, 2000)
             } else {
                 window.JAMS_Answer(false)
@@ -205,7 +205,9 @@ export default class Page10 extends Component {
                     })
                 }
                 this.setState({
-                    answerTip: 0
+                    answerTip: 0,
+                    raduioflg: true,
+                    audioUrl: require('../Qaudio/false.mp3'),
                 })
                 clearTimeout(t)
                 t = setTimeout(() => {
@@ -238,12 +240,12 @@ export default class Page10 extends Component {
                     <img className={answerTip == 0 ? answer === "B" ? "cuos" : "cuo" : "hide"} src={require("./images/cuo.png")} alt="" />
                 </div>
                 <div className="superP">
-                    <img className={answerNum >= 1 ? zhadan1 == 0 ? "suger suger1" : "zha zha1" : "hide"} src={zhadan1 == 0 ? require("./images/red.png") : require("./images/zha1.gif")} alt="" />
-                    <img className={answerNum >= 2 ? zhadan2 == 0 ? "suger suger2" : "zha zha2" : "hide"} src={zhadan2 == 0 ? require("./images/blue.png") : require("./images/zha2.gif")} alt="" />
-                    <img className={answerNum >= 3 ? zhadan3 == 0 ? "suger suger3" : "zha zha3" : "hide"} src={zhadan3 == 0 ? require("./images/yellow.png") : require("./images/zha3.gif")} alt="" />
-                    <img className={answerNum >= 4 ? zhadan4 == 0 ? "suger suger4" : "zha zha4" : "hide"} src={zhadan4 == 0 ? require("./images/red.png") : require("./images/zha4.gif")} alt="" />
-                    <img className={answerNum >= 5 ? zhadan5 == 0 ? "suger suger5" : "zha zha5" : "hide"} src={zhadan5 == 0 ? require("./images/blue.png") : require("./images/zha5.gif")} alt="" />
-                    <img className={answerNum >= 6 ? zhadan6 == 0 ? "suger suger6" : "zha zha6" : "hide"} src={zhadan6 == 0 ? require("./images/yellow.png") : require("./images/zha6.gif")} alt="" />
+                    <GifPlayer className={answerNum >= 1 ? zhadan1 == 0 ? "suger suger1" : "zha zha1" : "hide"} gif={zhadan1 == 0 ? require("./images/red.png") : require("./images/zha.gif")} autoplay="true" />
+                    <GifPlayer className={answerNum >= 2 ? zhadan2 == 0 ? "suger suger2" : "zha zha2" : "hide"} gif={zhadan2 == 0 ? require("./images/blue.png") : require("./images/zha.gif")} autoplay="true" />
+                    <GifPlayer className={answerNum >= 3 ? zhadan3 == 0 ? "suger suger3" : "zha zha3" : "hide"} gif={zhadan3 == 0 ? require("./images/yellow.png") : require("./images/zha.gif")} autoplay="true"/>
+                    <GifPlayer className={answerNum >= 4 ? zhadan4 == 0 ? "suger suger4" : "zha zha4" : "hide"} gif={zhadan4 == 0 ? require("./images/red.png") : require("./images/zha.gif")} autoplay="true" />
+                    <GifPlayer className={answerNum >= 5 ? zhadan5 == 0 ? "suger suger5" : "zha zha5" : "hide"} gif={zhadan5 == 0 ? require("./images/blue.png") : require("./images/zha.gif")} autoplay="true"/>
+                    <GifPlayer className={answerNum >= 6 ? zhadan6 == 0 ? "suger suger6" : "zha zha6" : "hide"} gif={zhadan6 == 0 ? require("./images/yellow.png") : require("./images/zha.gif")} autoplay="true" />
                 </div>
                 <img className={shuiTip == 1 ? "shui" : "hide"} src={require("./images/shui.gif")} alt="" />
                 <audio ref="audio" src={audioUrl} autoPlay={raduioflg ? true : false}></audio>

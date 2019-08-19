@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
+import GifPlayer from 'react-gif-player';
 import './css/index.css';
-// let pumpkint=0
-// let t2 = 0 ;
+window.clickTip = 0
 export default class Page7 extends Component {
     constructor(props) {
         super(props)
@@ -28,27 +28,37 @@ export default class Page7 extends Component {
             t2:0,
             yanshiShow:'none',
             yanshisrc:'',
+            pumpkinerrbox:'none'
         }
     }
     componentDidMount() {
         this.state.pumpkint = setInterval(()=>{
             if(window.clickTip == 1){
-                // if(localStorage.getItem("sentencegame1")==1){
-                //     localStorage.setItem("sentencegame1",0)
-                //     window.yanshiFn(this,require("./images/pumpkin/yanshi.gif"))
-                // }
                 clearInterval(this.state.pumpkint)
                 this.state.t2 = setTimeout(()=>{
-                    window.clickTip=0
                     window.JAMS_Answer(false)
+                    window.clickTip = 0
                     this.setState({
                         clickone:false,
-                        audioUrl:require('./images/audio/error.mp3'),
-                        raduioflg:true,
-                        pumpkin:'none',
-                        pumpkinflg:'block',
-                        pumpkinsrc:window.data[this.state.index].pumpkinsrc[1]
+                        audioUrl:require('../Qaudio/false.mp3'),
+                        raduioflg:true
                     })
+                    setTimeout(() => {
+                        window.clickTip = 0
+                        this.setState({
+                            clickone:false,
+                            audioUrl:require('./images/audio/error.mp3'),
+                            raduioflg:true,
+                            pumpkin:'none',
+                            pumpkinflg:'block',
+                            pumpkinsrc:window.data[this.state.index].pumpkinsrc[1]
+                        })
+                        setTimeout(()=>{
+                            this.setState({
+                                pumpkinerrbox:'block',
+                            })
+                        },1500)
+                    }, 2000);
                     clearTimeout(this.state.t2)
                 },10000)
             }
@@ -62,9 +72,6 @@ export default class Page7 extends Component {
         // 卸载异步操作设置状态
         clearInterval(this.state.pumpkint)
         clearTimeout(this.state.t2)
-        this.setState = (state, callback) => {
-        return
-        }
     }
     pageDown() {
         // hashHistory.replace("/Page2")
@@ -77,9 +84,10 @@ export default class Page7 extends Component {
             window.clickTip = 0
             if(type === 'A' && this.state.answer == 'A'){
                 window.JAMS_Answer(true)
+                window.clickTip = 0
                 this.setState({
                     clickone:false,
-                    audioUrl:require('./images/audio/Great.mp3'),
+                    audioUrl:require('../Qaudio/true.mp3'),
                     raduioflg:true,
                     pumAclass:'pumpkinBoxa pumpkinsuma'
                 })
@@ -87,20 +95,23 @@ export default class Page7 extends Component {
                     this.setState({
                         pumpkin:'none',
                         pumpkinflg:'block',
-                        pumpkinsrc:window.data[this.state.index].pumpkinsrc[0],
+                        pumpkinsrc:require("./images/pumpkin/success.gif"),
+                        audioUrl:require('./images/audio/Great.mp3'),
+                        raduioflg:true,
                     })
-                },800)
+                },1600)
                 setTimeout(()=>{
                     this.setState({
                         pumkinSucsentenceflg:'block',
                         pumkinSucsentence:window.data[this.state.index].pumkinSucsentence
                     })
-                },1400)
+                },2200)
             }else if(type === 'B' && this.state.answer == 'B'){
                 window.JAMS_Answer(true)
+                window.clickTip = 0
                 this.setState({
                     clickone:false,
-                    audioUrl:require('./images/audio/Great.mp3'),
+                    audioUrl:require('../Qaudio/true.mp3'),
                     raduioflg:true,
                     pumBclass:'pumpkinBoxb pumpkinsumb'
                 })
@@ -108,33 +119,45 @@ export default class Page7 extends Component {
                     this.setState({
                         pumpkin:'none',
                         pumpkinflg:'block',
-                        pumpkinsrc:window.data[this.state.index].pumpkinsrc[0],
+                        pumpkinsrc:require("./images/pumpkin/success.gif"),
+                        audioUrl:require('./images/audio/Great.mp3'),
+                        raduioflg:true,
                     })
-                },800)
+                },1600)
                 setTimeout(()=>{
                     this.setState({
                         pumkinSucsentenceflg:'block',
                         pumkinSucsentence:window.data[this.state.index].pumkinSucsentence,
                     })
-                },1400)
+                },2200)
             }else{
                 window.JAMS_Answer(false)
+                window.clickTip = 0
                 this.setState({
                     clickone:false,
-                    audioUrl:require('./images/audio/error.mp3'),
-                    raduioflg:true,
-                    pumpkin:'none',
-                    pumpkinflg:'block',
-                    pumpkinsrc:window.data[this.state.index].pumpkinsrc[1]
+                    audioUrl:require('../Qaudio/false.mp3'),
+                    raduioflg:true
                 })
-                
-            }
-            
+                setTimeout(() => {
+                    this.setState({
+                        clickone:false,
+                        audioUrl:require('./images/audio/error.mp3'),
+                        raduioflg:true,
+                        pumpkin:'none',
+                        pumpkinflg:'block',
+                        pumpkinsrc:require("./images/pumpkin/error.gif")
+                    })
+                    setTimeout(()=>{
+                        this.setState({
+                            pumpkinerrbox:'block',
+                        })
+                    },1500)
+                }, 2000);
+            } 
         }
-       
     }
     render() {
-        const {audioUrl,sentenceAtip,sentenceBtip,sentenceA,sentenceB,raduioflg,pumpkinflg,pumpkinsrc,pumAclass,pumpkin,pumBclass,pumkinSucsentenceflg,pumkinSucsentence,yanshiShow,yanshisrc} = this.state
+        const {audioUrl,sentenceAtip,sentenceBtip,sentenceA,sentenceB,raduioflg,pumpkinflg,pumpkinsrc,pumAclass,pumpkin,pumBclass,pumkinSucsentenceflg,pumkinSucsentence,yanshiShow,yanshisrc,data,pumpkinerrbox} = this.state
         return (
             <div className="bgbox" >
                 <img className="dollyanshi" style={{display:yanshiShow}} src={yanshisrc} alt=""/>
@@ -164,10 +187,15 @@ export default class Page7 extends Component {
                     <img className="workbg" src={require("./images/pumpkin/work.png")} alt="" />
                     <p className="workFont">{sentenceBtip}</p>
                 </div>
-
-                <img className="pumpkinSuc" style={{pumpkinflg}} src={pumpkinsrc} />
+                <GifPlayer className="pumpkinSuc" style={{pumpkinflg}} gif={pumpkinsrc} autoplay="true" />
+                {/* <img className="pumpkinSuc" style={{pumpkinflg}} src={pumpkinsrc} /> */}
                 <p className="pumkinSucsentence" style={{pumkinSucsentenceflg}}>{pumkinSucsentence}</p>
-
+                <div className="pumpkinerrbox" style={{display:pumpkinerrbox}}>
+                    <div className="pumkinerror down">
+                        <img src={require("./images/pumpkin/errorbox.png")} alt=""/>
+                        <p className="word">{data.pumkinSucsentence}</p>
+                    </div>
+                </div>
                 <audio src={audioUrl} autoPlay={raduioflg?true:false} >
                       <track kind="captions" />
                       您的浏览器不支持 audio 元素。

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import GifPlayer from 'react-gif-player';
 require("./css/index.css")
-
+window.clickTip = 0
 export default class Page14 extends Component {
   constructor(props) {
     super(props)
@@ -61,8 +61,15 @@ export default class Page14 extends Component {
         this.setState({
           answer: 1,
           nowAnswer: type,
-          audioUrl:require("./images/suger.mp3")
+          audioUrl:require('../Qaudio/true.mp3'),
+        },()=>{
+          this.refs.audio.play()
         })
+        setTimeout(() => {
+          this.setState({
+            audioUrl:require("./images/suger.mp3")
+          })
+        },800)
         setTimeout(() => {
           this.setState({
             answerA: 1
@@ -75,8 +82,15 @@ export default class Page14 extends Component {
         this.setState({
           answer: 1,
           nowAnswer: type,
-          audioUrl:require("./images/suger.mp3")
+          audioUrl:require('../Qaudio/true.mp3'),
+        },()=>{
+          this.refs.audio.play()
         })
+        setTimeout(() => {
+          this.setState({
+            audioUrl:require("./images/suger.mp3")
+          })
+        },800)
         setTimeout(() => {
           this.setState({
             answerA: 1
@@ -89,8 +103,15 @@ export default class Page14 extends Component {
         this.setState({
           answer: 0,
           nowAnswer: type,
-          audioUrl:require("./images/zha.mp3")
+          audioUrl:require('../Qaudio/false.mp3'),
+        },()=>{
+          this.refs.audio.play()
         })
+        setTimeout(() => {
+          this.setState({
+            audioUrl:require("./images/zha.mp3")
+          })
+        },800)
         setTimeout(() => {
           this.setState({
             answerA: 1

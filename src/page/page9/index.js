@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import './css/index.css';
-
+window.clickTip = 0
 export default class Page9 extends Component {
     constructor(props) {
         super(props)
@@ -50,9 +50,13 @@ export default class Page9 extends Component {
                             raduioflg:true,
                             cuoleft:'22.625vw',
                             cuoflg:'block',
-                            starturl:require("./images/whack-a-mole/error.gif"),
-                            startflg:'block'
                         })
+                        setTimeout(()=>{
+                            this.setState({
+                                starturl:require("./images/whack-a-mole/error.gif"),
+                                startflg:'block'
+                            })
+                        },2000)
     
                     } else if (this.state.answer !== 'B') {
                         this.setState({
@@ -61,9 +65,13 @@ export default class Page9 extends Component {
                             raduioflg:true,
                             cuoleft:'60.625vw',
                             cuoflg:'block',
-                            starturl:require("./images/whack-a-mole/error.gif"),
-                            startflg:'block'
                         })
+                        setTimeout(()=>{
+                            this.setState({
+                                starturl:require("./images/whack-a-mole/error.gif"),
+                                startflg:'block'
+                            })
+                        },2000)
                     }
                     clearTimeout(this.state.t1)
                 },10000)
@@ -119,9 +127,13 @@ export default class Page9 extends Component {
                             raduioflg:true,
                             cuoleft:'22.625vw',
                             cuoflg:'block',
-                            starturl:require("./images/whack-a-mole/error.gif"),
-                            startflg:'block'
                         })
+                        setTimeout(()=>{
+                            this.setState({
+                                starturl:require("./images/whack-a-mole/error.gif"),
+                                startflg:'block'
+                            })
+                        },2000)
 
                     }else if(type === 'B'){
                         this.setState({
@@ -130,9 +142,13 @@ export default class Page9 extends Component {
                             raduioflg:true,
                             cuoleft:'60.625vw',
                             cuoflg:'block',
-                            starturl:require("./images/whack-a-mole/error.gif"),
-                            startflg:'block'
                         })
+                        setTimeout(()=>{
+                            this.setState({
+                                starturl:require("./images/whack-a-mole/error.gif"),
+                                startflg:'block'
+                            })
+                        },2000)
                     }
                     
                 }
@@ -158,7 +174,7 @@ export default class Page9 extends Component {
                 </div>
 
                 <div className="molestart">
-                    <img className="startimg" style={{dispaly:startflg}} src={starturl} alt="" />
+                    <img className="startimg" style={{display:startflg}} src={starturl} alt="" />
                     <img className="startimgsuc" style={{display:sucflg}} src={startsrc} alt="" />
                 </div>
                 <img className="moledui" style={{left:duileft,display:duiflg}} src={require("./images/whack-a-mole/dui.png")} alt="" />

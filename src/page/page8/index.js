@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import './css/index.css';
+window.clickTip = 0
 export default class Page8 extends Component {
     constructor(props) {
         super(props)
@@ -22,8 +23,8 @@ export default class Page8 extends Component {
             startclass: 'start2',
             animalsrc: "",
             animalflg: 'none',
-            t:0,
-            t1:0
+            t: 0,
+            t1: 0
         }
     }
     componentDidMount() {
@@ -32,93 +33,133 @@ export default class Page8 extends Component {
                 selecthidden: 'none'
             })
         }, 4000)
-        this.state.t = setInterval(()=>{
-            if(window.clickTip == 1){
+        this.state.t = setInterval(() => {
+            if (window.clickTip == 1) {
                 clearInterval(this.state.t)
-                this.state.t1 = setTimeout(()=>{
-                    window.clickTip=0
+                this.state.t1 = setTimeout(() => {
+                    window.clickTip = 0
                     window.JAMS_Answer(false)
                     if (this.state.answer !== 'A') {
                         this.setState({
                             clickone: false,
-                            audioUrl: require('./images/audio/error.mp3'),
+                            audioUrl: require('../Qaudio/false.mp3'),
                             raduioflg: true,
                             cuoleft: '21.625vw',
                             cuoflg: 'block',
-                            animalflg: 'block',
-                            animalsrc: require("./images/candy/animal.gif")
                         })
-    
+                        setTimeout(() => {
+                            this.setState({
+                                clickone: false,
+                                audioUrl: require('./images/audio/error.mp3'),
+                                raduioflg: true,
+                                animalflg: 'block',
+                                animalsrc: require("./images/candy/animal.gif")
+                            })
+                        }, 2000)
                     } else if (this.state.answer !== 'B') {
                         this.setState({
                             clickone: false,
-                            audioUrl: require('./images/audio/error.mp3'),
+                            audioUrl: require('../Qaudio/false.mp3'),
                             raduioflg: true,
                             cuoleft: '60.625vw',
                             cuoflg: 'block',
-                            animalflg: "block",
-                            animalsrc: require("./images/candy/animal.gif")
                         })
+                        setTimeout(() => {
+                            this.setState({
+                                clickone: false,
+                                audioUrl: require('./images/audio/error.mp3'),
+                                raduioflg: true,
+                                animalflg: "block",
+                                animalsrc: require("./images/candy/animal.gif")
+                            })
+                        }, 2000)
                     }
                     clearTimeout(this.state.t1)
-                },10000)
+                }, 10000)
             }
-        },20)
+        }, 20)
     }
     click(type) {
-        if (this.state.clickone&& window.clickTip==1) {
+        if (this.state.clickone && window.clickTip == 1) {
             clearInterval(this.state.t)
             clearTimeout(this.state.t1)
             if (type === 'A' && this.state.answer == 'A') {
                 window.JAMS_Answer(true)
-                window.clickTip=0
+                window.clickTip = 0
                 this.setState({
                     clickone: false,
-                    audioUrl: require('./images/audio/Great.mp3'),
-                    duileft: '23.625vw',
-                    duiflg: 'block',
+                    audioUrl: require('../Qaudio/true.mp3'),
                     raduioflg: true,
-                    linedisplaya: 'none',
-                    downa: true,
-                    startclass: 'start2 left'
                 })
+                setTimeout(() => {
+                    this.setState({
+                        clickone: false,
+                        audioUrl: require('./images/audio/Great.mp3'),
+                        duileft: '23.625vw',
+                        duiflg: 'block',
+                        raduioflg: true,
+                        linedisplaya: 'none',
+                        downa: true,
+                        startclass: 'start2 left'
+                    })
+                }, 2000);
             } else if (type === 'B' && this.state.answer == 'B') {
                 window.JAMS_Answer(true)
-                window.clickTip=0
+                window.clickTip = 0
                 this.setState({
                     clickone: false,
-                    audioUrl: require('./images/audio/Great.mp3'),
+                    audioUrl: require('../Qaudio/true.mp3'),
+                    raduioflg: true,
                     duileft: '61.625vw',
                     duiflg: 'block',
-                    raduioflg: true,
-                    linedisplayb: 'none',
-                    downb: true,
-                    startclass: 'start2 right'
                 })
+                setTimeout(() => {
+                    this.setState({
+                        clickone: false,
+                        audioUrl: require('./images/audio/Great.mp3'),
+                        raduioflg: true,
+                        linedisplayb: 'none',
+                        downb: true,
+                        startclass: 'start2 right'
+                    })
+                }, 2000)
             } else {
-                window.clickTip=0
+                window.clickTip = 0
                 window.JAMS_Answer(false)
                 if (type === 'A') {
                     this.setState({
                         clickone: false,
-                        audioUrl: require('./images/audio/error.mp3'),
+                        audioUrl: require('../Qaudio/false.mp3'),
                         raduioflg: true,
                         cuoleft: '21.625vw',
                         cuoflg: 'block',
-                        animalflg: 'block',
-                        animalsrc: require("./images/candy/animal.gif")
                     })
-
+                    setTimeout(() => {
+                        this.setState({
+                            clickone: false,
+                            audioUrl: require('./images/audio/error.mp3'),
+                            raduioflg: true,
+                            animalflg: 'block',
+                            animalsrc: require("./images/candy/animal.gif")
+                        })
+                    }, 2000)
                 } else if (type === 'B') {
                     this.setState({
                         clickone: false,
-                        audioUrl: require('./images/audio/error.mp3'),
+                        audioUrl: require('../Qaudio/false.mp3'),
                         raduioflg: true,
                         cuoleft: '60.625vw',
                         cuoflg: 'block',
-                        animalflg: "block",
-                        animalsrc: require("./images/candy/animal.gif")
                     })
+                    setTimeout(() => {
+                        this.setState({
+                            clickone: false,
+                            audioUrl: require('./images/audio/error.mp3'),
+                            raduioflg: true,
+                            animalflg: "block",
+                            animalsrc: require("./images/candy/animal.gif")
+                        })
+                    }, 2000)
                 }
             }
         }
@@ -128,11 +169,11 @@ export default class Page8 extends Component {
         clearInterval(this.state.t)
         clearTimeout(this.state.t1)
         this.setState = (state, callback) => {
-        return
+            return
         }
     }
     render() {
-        const { data,audioUrl, raduioflg, selecthidden, duileft, cuoleft, duiflg, cuoflg, linedisplaya, linedisplayb, downa, downb, startclass, animalsrc, animalflg } = this.state
+        const { data, audioUrl, raduioflg, selecthidden, duileft, cuoleft, duiflg, cuoflg, linedisplaya, linedisplayb, downa, downb, startclass, animalsrc, animalflg } = this.state
         return (
             <div className="bgbox">
                 <img className="bg" src={require("./images/candy/bg.png")} alt="" />

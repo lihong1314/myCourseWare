@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 require("./css/index.css")
-
+window.clickTip = 0
 export default class Page14 extends Component {
   constructor(props) {
     super(props)
@@ -27,8 +27,9 @@ export default class Page14 extends Component {
       t: null,
       t1: null,
       data: window.data[this.props.location.search.substring(this.props.location.search.indexOf("=") + 1)],
-      tip:0,
-      audioUrl:null
+      tip: 0,
+      audioUrl: null,
+      audioUrlBG: null
     }
   }
 
@@ -139,13 +140,22 @@ export default class Page14 extends Component {
     }
 
   }
-
+  componentWillUnmount() {
+    // 卸载异步操作设置状态
+    clearTimeout(this.state.t1)
+    clearTimeout(this.state.t)
+    this.setState({
+      audioUrl:''
+    })
+  }
   componentDidMount() {
+    this.refs.audioBG.play()
     this.state.t = setInterval(() => {
       if (window.clickTip == 1) {
-        window.clickTip =0
+        this.refs.audioBG.pause()
+        window.clickTip = 0
         this.setState({
-          tip:1
+          tip: 1
         })
         this.click();
       }
@@ -154,7 +164,7 @@ export default class Page14 extends Component {
   click() {
     this.setState({
       answerType: 1,
-      TrueAnswer:this.state.data.answerArr[this.state.answerNum]
+      TrueAnswer: this.state.data.answerArr[this.state.answerNum]
     })
     this.state.t1 = setTimeout(() => {
       window.JAMS_Answer(false)
@@ -171,14 +181,14 @@ export default class Page14 extends Component {
       clearTimeout(this.state.t1)
       this.setState({
         answerType: 1,
-        tip:0
+        tip: 0
       })
       if (type === "A" && this.state.TrueAnswer === "A") {
         window.JAMS_Answer(true)
         this.setState({
           answer: 1,
-          audioUrl:require('./images/true.mp3')
-        },()=>{
+          audioUrl: require('./images/true.mp3')
+        }, () => {
           this.refs.audio.play()
         })
         setTimeout(() => {
@@ -186,13 +196,13 @@ export default class Page14 extends Component {
             trueFalse: 1
           })
           this.doorFn(1)
-        }, 2000)  
+        }, 2000)
       } else if (type === "B" && this.state.TrueAnswer === "B") {
         window.JAMS_Answer(true)
         this.setState({
           answer: 1,
-          audioUrl:require('./images/true.mp3')
-        },()=>{
+          audioUrl: require('./images/true.mp3')
+        }, () => {
           this.refs.audio.play()
         })
         setTimeout(() => {
@@ -205,8 +215,8 @@ export default class Page14 extends Component {
         window.JAMS_Answer(false)
         this.setState({
           answer: 0,
-          audioUrl:require('./images/false.mp3')
-        },()=>{
+          audioUrl: require('./images/false.mp3')
+        }, () => {
           this.refs.audio.play()
         })
       }
@@ -250,6 +260,7 @@ export default class Page14 extends Component {
           }
           if (this.state.answerNum == 6) {
             clearInterval(this.state.t)
+            this.refs.audioBG.play()
             this.setState({
               answerType: 0
             })
@@ -271,7 +282,7 @@ export default class Page14 extends Component {
     let { A, B, answer, TrueAnswer,
       trueFalse, doorType1, doorType2, doorType3,
       doorType4, doorType5, doorType6, answerType,
-      answer1, answer2, answer3, answer4, answer5, answer6 ,audioUrl} = this.state
+      answer1, answer2, answer3, answer4, answer5, answer6, audioUrl, audioUrlBG } = this.state
     return (
       <div className="FerrisWheel">
         <div className={answerType == 1 ? "hide" : ""}>
@@ -341,6 +352,7 @@ export default class Page14 extends Component {
           </div>
         </div>
         <audio ref="audio" src={audioUrl}></audio>
+        <audio ref="audioBG" src={require('./images/bg.mp3')} loop></audio>
       </div>
     )
   }

@@ -1,0 +1,82 @@
+.word{
+    position: relative;
+}
+@keyframes Q{
+    0%{
+        top:21vw;
+    }
+    50%{
+        top:-15vw;
+    }
+    100%{
+        top:-55vw;
+    }
+}
+.wordAK,.wordBK{
+    width: 25vw;
+    height: 37.3vw;
+    position: absolute;
+    top: 21vw;
+    
+}
+.WordBallA{
+    left: 11vw;
+}
+.WordMove{
+    animation: Q 1s linear 1;
+    animation-fill-mode: forwards; 
+    -webkit-animation-fill-mode: forwards;
+}
+.WordBallB{
+    left: 67vw;
+}
+.WordBall{
+    width: 25vw;
+}
+
+.WordAnswer{
+    position: absolute;
+    width: 16vw;
+    top: 6vw;
+    left: 5vw;
+}
+
+.WordBig{
+    width: 18vw;
+    position: absolute;
+    left: 41.6vw;
+    top: 2vw;
+}
+.WordZha{
+    width: 45vw;
+    position: absolute;
+    top: 19vw;
+    left: 1vw;
+}
+.WordZhaR{
+    left:57vw;
+}
+.giftGif{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.Mask{
+    height: 100%;
+    background: rgba(0,0,0,.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+.MaskBall{
+    position: absolute;
+    left: 38vw;
+    top: 12vw;
+}
+.MaskAnswer{
+    width: 18vw;
+    position: absolute;
+    top: 17vw;
+    left: 42vw;
+}

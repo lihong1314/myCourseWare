@@ -1,0 +1,165 @@
+.mybgbox{
+    width:100%;
+    position: relative;
+}
+.mybgbox .mybgimg{
+    width:100%;
+}
+.mybgbox .myone{
+    width: 13vw;
+    position: absolute;
+    right: 70vw;
+    bottom: 2vw;
+    z-index: 3;
+}
+.mybgbox .mytwo{
+    width: 13vw;
+    position: absolute;
+    right: 39vw;
+    bottom: 7.5vw;
+}
+.mybgbox .mybananas{
+    width: 15vw;
+    position: absolute;
+    left: 65vw;
+    bottom: 9vw;
+}
+
+/* .rotateCenter1{
+    transform-origin:bottom center;
+    -webkit-transform-origin:bottom center;
+    -moz-transform-origin:bottom center;
+    transform:rotate(-5deg);
+    -webkit-transform:rotate(-5deg);
+    -moz-transform:rotate(-5deg);
+    -ms-transform:rotate(-5deg);
+    -o-transform:rotate(-5deg);
+    animation: rotateCenter 1.3s ease infinite 0.3s;
+    -webkit-animation: rotateCenter 1.3s ease infinite 0.3s;
+}
+.rotateCenter2{
+    transform-origin:bottom center;
+    -webkit-transform-origin:bottom center;
+    -moz-transform-origin:bottom center;
+    transform:rotate(-5deg);
+    -webkit-transform:rotate(-5deg);
+    -moz-transform:rotate(-5deg);
+    -ms-transform:rotate(-5deg);
+    -o-transform:rotate(-5deg);
+    animation: rotateCenter 0.8s ease infinite 0.5s;
+    -webkit-animation: rotateCenter 0.8s ease infinite 0.5s;
+} */
+
+/* .rotateCenter{
+    transform-origin:bottom center;
+    -webkit-transform-origin:bottom center;
+    -moz-transform-origin:bottom center;
+    transform:rotate(-5deg);
+    -webkit-transform:rotate(-5deg);
+    -moz-transform:rotate(-5deg);
+    -ms-transform:rotate(-5deg);
+    -o-transform:rotate(-5deg);
+    animation: rotateCenter 1s ease infinite;
+    -webkit-animation: rotateCenter 1s ease infinite;
+} */
+@keyframes rotateCenter{
+    0%{
+        transform:rotate(-5deg);
+        -webkit-transform:rotate(-5deg);
+        -moz-transform:rotate(-5deg);
+        -ms-transform:rotate(-5deg);
+        -o-transform:rotate(-5deg);
+}
+    
+    50%{
+        transform:rotate(5deg);
+        -webkit-transform:rotate(5deg);
+        -moz-transform:rotate(5deg);
+        -ms-transform:rotate(5deg);
+        -o-transform:rotate(5deg);
+}
+    
+    100%{
+        transform:rotate(-5deg);
+        -webkit-transform:rotate(-5deg);
+        -moz-transform:rotate(-5deg);
+        -ms-transform:rotate(-5deg);
+        -o-transform:rotate(-5deg);
+}
+}
+@-moz-keyframes rotateCenter{
+    0%{
+        transform:rotate(-5deg);
+        -webkit-transform:rotate(-5deg);
+        -moz-transform:rotate(-5deg);
+        -ms-transform:rotate(-5deg);
+        -o-transform:rotate(-5deg);
+}
+    
+    50%{
+        transform:rotate(5deg);
+        -webkit-transform:rotate(5deg);
+        -moz-transform:rotate(5deg);
+        -ms-transform:rotate(5deg);
+        -o-transform:rotate(5deg);
+}
+    
+    100%{
+        transform:rotate(-5deg);
+        -webkit-transform:rotate(-5deg);
+        -moz-transform:rotate(-5deg);
+        -ms-transform:rotate(-5deg);
+        -o-transform:rotate(-5deg);
+}
+}
+
+@-webkit-keyframes rotateCenter{
+    0%{
+        transform:rotate(-5deg);
+        -webkit-transform:rotate(-5deg);
+        -moz-transform:rotate(-5deg);
+        -ms-transform:rotate(-5deg);
+        -o-transform:rotate(-5deg);
+}
+    
+    50%{
+        transform:rotate(5deg);
+        -webkit-transform:rotate(5deg);
+        -moz-transform:rotate(5deg);
+        -ms-transform:rotate(5deg);
+        -o-transform:rotate(5deg);
+}
+    
+    100%{
+        transform:rotate(-5deg);
+        -webkit-transform:rotate(-5deg);
+        -moz-transform:rotate(-5deg);
+        -ms-transform:rotate(-5deg);
+        -o-transform:rotate(-5deg);
+}
+}
+@-o-keyframes rotateCenter{
+    0%{
+        transform:rotate(-5deg);
+        -webkit-transform:rotate(-5deg);
+        -moz-transform:rotate(-5deg);
+        -ms-transform:rotate(-5deg);
+        -o-transform:rotate(-5deg);
+}
+    
+    50%{
+        transform:rotate(5deg);
+        -webkit-transform:rotate(5deg);
+        -moz-transform:rotate(5deg);
+        -ms-transform:rotate(5deg);
+        -o-transform:rotate(5deg);
+}
+    
+    100%{
+        transform:rotate(-5deg);
+        -webkit-transform:rotate(-5deg);
+        -moz-transform:rotate(-5deg);
+        -ms-transform:rotate(-5deg);
+        -o-transform:rotate(-5deg);
+}
+}

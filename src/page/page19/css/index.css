@@ -1,0 +1,75 @@
+.Dinosaur{
+    width: 100%;
+    position: relative;
+}
+
+.MAA,.MAB{
+    width: 19vw;
+    position: absolute;
+    top: 17vw;
+    left: 18.8vw;
+    z-index: 2;
+}
+.MAB{
+    left: 48.8vw;
+}
+.MAAK,.MABK{
+    width: 22vw;
+    position: absolute;
+    top: 13.4vw;
+}
+.MAAK{
+    left: 16.8vw;
+}
+.MABK{
+    left: 46.8vw;
+}
+.MAAD,.MABD{
+    width: 29vw;
+    position: absolute;
+    top: 1.9vw;
+}
+.MAAD{
+    left: 13.2vw;
+}
+.MABD{
+    left: 43.2vw;
+}
+.MA{
+    width: 21vw;
+    position: absolute;
+    top: 2vw;
+    right: 12vw;
+}
+.MAerror{
+    width: 34vw;
+    position: absolute;
+    top: 3vw;
+    right: 1vw;
+}
+.MAsuccess{
+    width: 25vw;
+    position: absolute;
+    top: .6vw;
+    right: 10vw;
+}
+.Dinosaur .cuo{
+    z-index: 3;
+    transform: translateY(-68%);
+    left: 20vw;
+}
+.Dinosaur .cuoR{
+    z-index: 3;
+    transform: translateY(-68%);
+    left: 50vw;
+}
+.Dinosaur .dui{
+    z-index: 3;
+    transform: translateY(-68%);
+    left: 52vw;
+}
+.Dinosaur .duiL{
+    z-index: 3;
+    transform: translateY(-68%);
+    left: 22vw;
+}

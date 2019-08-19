@@ -1,0 +1,28 @@
+.car{
+    width: 100%;
+    position: relative;
+}
+
+.CarS{
+    width: 18.4vw;
+    position: absolute;
+    top: .5vw;
+}
+.CarA{
+    left: 15.2vw;
+}
+.CarB{
+    left: 64vw;
+}
+.CarS img,.CarS span{
+    width: 100%
+}
+.car > div > span{
+    font-size: 2.5vw;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    text-align: center;
+    transform: translateY(-160%)
+}

@@ -7,36 +7,57 @@
 .FerrisWheel .bg {
     width: 100%;
 }
-.guP{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 10;
-}
+
 @keyframes rotate{
     0%{
-        transform: rotateZ(0)
-    }
+        transform: rotateZ(0)    ;
+        -webkit-transform: rotateZ(0);
+        -moz-transform: rotateZ(0);
+        -ms-transform: rotateZ(0);
+        -o-transform: rotateZ(0);
+}
     16%{
-        transform: rotateZ(60deg)
-    }
+        transform: rotateZ(60deg)    ;
+        -webkit-transform: rotateZ(60deg);
+        -moz-transform: rotateZ(60deg);
+        -ms-transform: rotateZ(60deg);
+        -o-transform: rotateZ(60deg);
+}
     32%{
-        transform: rotateZ(120deg)
-    }
+        transform: rotateZ(120deg)    ;
+        -webkit-transform: rotateZ(120deg);
+        -moz-transform: rotateZ(120deg);
+        -ms-transform: rotateZ(120deg);
+        -o-transform: rotateZ(120deg);
+}
     50%{
-        transform: rotateZ(180deg)
-    }
+        transform: rotateZ(180deg)    ;
+        -webkit-transform: rotateZ(180deg);
+        -moz-transform: rotateZ(180deg);
+        -ms-transform: rotateZ(180deg);
+        -o-transform: rotateZ(180deg);
+}
     66%{
-        transform: rotateZ(240deg)
-    }
+        transform: rotateZ(240deg)    ;
+        -webkit-transform: rotateZ(240deg);
+        -moz-transform: rotateZ(240deg);
+        -ms-transform: rotateZ(240deg);
+        -o-transform: rotateZ(240deg);
+}
     82%{
-        transform: rotateZ(300deg)
-    }
+        transform: rotateZ(300deg)    ;
+        -webkit-transform: rotateZ(300deg);
+        -moz-transform: rotateZ(300deg);
+        -ms-transform: rotateZ(300deg);
+        -o-transform: rotateZ(300deg);
+}
     100%{
-        transform: rotateZ(360deg)
-    }
+        transform: rotateZ(360deg)    ;
+        -webkit-transform: rotateZ(360deg);
+        -moz-transform: rotateZ(360deg);
+        -ms-transform: rotateZ(360deg);
+        -o-transform: rotateZ(360deg);
+}
 }
 .gu,
 .xin {
@@ -46,10 +67,11 @@
     left: 35.76vw;
 }
 .gu{
-    /* transform: rotateZ(60deg); */
-    animation: rotate 6s linear infinite ;
+    /*transform: rotateZ(60deg);
+    */animation: rotate 6s linear infinite ;
     animation-fill-mode: forwards;
     -webkit-animation-fill-mode: forwards;
+    -webkit-animation: rotate 6s linear infinite ;
 }
 .gus{
     position: absolute;
@@ -59,26 +81,54 @@
 }
 @keyframes rotates{
     0%{
-        transform: rotateZ(0)
-    }
+        transform: rotateZ(0)    ;
+        -webkit-transform: rotateZ(0);
+        -moz-transform: rotateZ(0);
+        -ms-transform: rotateZ(0);
+        -o-transform: rotateZ(0);
+}
     16%{
-        transform: rotateZ(-60deg)
-    }
+        transform: rotateZ(-60deg)    ;
+        -webkit-transform: rotateZ(-60deg);
+        -moz-transform: rotateZ(-60deg);
+        -ms-transform: rotateZ(-60deg);
+        -o-transform: rotateZ(-60deg);
+}
     32%{
-        transform: rotateZ(-120deg)
-    }
+        transform: rotateZ(-120deg)    ;
+        -webkit-transform: rotateZ(-120deg);
+        -moz-transform: rotateZ(-120deg);
+        -ms-transform: rotateZ(-120deg);
+        -o-transform: rotateZ(-120deg);
+}
     50%{
-        transform: rotateZ(-180deg)
-    }
+        transform: rotateZ(-180deg)    ;
+        -webkit-transform: rotateZ(-180deg);
+        -moz-transform: rotateZ(-180deg);
+        -ms-transform: rotateZ(-180deg);
+        -o-transform: rotateZ(-180deg);
+}
     66%{
-        transform: rotateZ(-240deg)
-    }
+        transform: rotateZ(-240deg)    ;
+        -webkit-transform: rotateZ(-240deg);
+        -moz-transform: rotateZ(-240deg);
+        -ms-transform: rotateZ(-240deg);
+        -o-transform: rotateZ(-240deg);
+}
     82%{
-        transform: rotateZ(-300deg)
-    }
+        transform: rotateZ(-300deg)    ;
+        -webkit-transform: rotateZ(-300deg);
+        -moz-transform: rotateZ(-300deg);
+        -ms-transform: rotateZ(-300deg);
+        -o-transform: rotateZ(-300deg);
+}
     100%{
-        transform: rotateZ(-360deg)
-    }
+        transform: rotateZ(-360deg)    ;
+        -webkit-transform: rotateZ(-360deg);
+        -moz-transform: rotateZ(-360deg);
+        -ms-transform: rotateZ(-360deg);
+        -o-transform: rotateZ(-360deg);
+}
 }
 .FerrisP {
     width: 50vw;
@@ -86,20 +136,25 @@
     position: absolute;
     top: 0;
     left: 26vw;
-    /* transform: rotateZ(60deg); */
-    animation: rotate 6s linear infinite;
+    /*transform: rotateZ(60deg);
+    */animation: rotate 6s linear infinite;
     animation-fill-mode: forwards;
     -webkit-animation-fill-mode: forwards;
+    -webkit-animation: rotate 6s linear infinite;
 }
 
 .Ferris {
     width: 12vw;
     position: absolute;
-    /* transform: rotateZ(-60deg); */
+    /*transform: rotateZ(-60deg);
+    */
     transform-origin: 48% 14%;
+    -webkit-transform-origin: 48% 14%;
+    -moz-transform-origin: 48% 14%;
     animation: rotates 6s linear infinite;
     animation-fill-mode: forwards;
     -webkit-animation-fill-mode: forwards;
+    -webkit-animation: rotates 6s linear infinite;
 }
 
 .FerrisOne {
@@ -152,13 +207,13 @@
     top: 43%
 }
 
-.answerA {
+/* .answerA2 {
     left: 24vw;
-}
+} */
 
-.answerB {
+/* .answerB2 {
     left: 55vw;
-}
+} */
 .zuo{
     width: 9.625vw;
     position: absolute;
@@ -169,6 +224,8 @@
     width: 17vw;
     position: absolute;
     transform-origin: 47% 11%;
+    -webkit-transform-origin: 47% 11%;
+    -moz-transform-origin: 47% 11%;
 }
 .lun{
     width: 69vw;
@@ -177,6 +234,8 @@
     top: -8%;
     left: 17vw;
     transform-origin: 49% -41%;
+    -webkit-transform-origin: 49% -41%;
+    -moz-transform-origin: 49% -41%;
 }
 .greenS{
     /* left: 18.7vw;
@@ -231,13 +290,16 @@
     top: 65%;
     left: 4.7vw;
     z-index: 3;
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
 }
 .cry{
     width: 25vw;
     position: absolute;
     top: 56.5%;
     left: 70vw;
-    z-index: 11;
 }
 .cuoFL{
     left: 27vw;
@@ -287,4 +349,5 @@
     animation: moves 1.5s linear 1;
     animation-fill-mode: forwards;
     -webkit-animation-fill-mode: forwards;
+    -webkit-animation: moves 1.5s linear 1;
 }

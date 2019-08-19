@@ -21,7 +21,7 @@ export default class Page2 extends Component{
         return (
             <div>
                 <img src={data.videoPoster} className={videoType==0?"FullScreen":"hide"} style={{"position":"absolute","zIndex":"2"}}  alt=""/>
-                <video ref="audio" className="FullScreen" autoPlay loop muted src={data.video} webkit-playsinline="true" playsinline="true" x5-video-player-type="true"  poster={data.videoPoster}></video>
+                <video ref="audio" className="FullScreen" autoPlay muted src={data.video} webkit-playsinline="true" playsinline="true" x5-video-player-type="true"  poster={data.videoPoster}></video>
             </div>
         )
     }
